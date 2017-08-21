@@ -45,10 +45,19 @@ a:active {
   order: 3;
 }
 
+.app-before-info.main>section {
+  order: 1;
+}
+
 .main>.shown-main-info {
   flex-basis: calc(50% - 4rem);
   order: 1;
 }
+
+.app-before-info.main>.shown-main-info {
+  order: 3;
+}
+
 .main>.hidden-main-info {
   display: none;
 }

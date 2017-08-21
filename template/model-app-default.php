@@ -21,7 +21,7 @@ const USE_DARK_THEME_SWITCH = True;
 const MOVABLE_SECTIONS = True;
 const MAX_NODES = 256 * 256;//Set max nodes
 const N_VIDEOS = 1;
-
+const APP_BEFORE_INFO = false;
 ?>
 <!doctype html>
 <html lang="en-US">
@@ -52,7 +52,7 @@ if (USE_DARK_THEME) {
 ?>has-header-image page">
   <h1 id="heading0" class="model-heading"></h1>
 
-  <div class="main">
+  <div class="main<?php if (APP_BEFORE_INFO) { echo " app-before-info"; } ?>">
 <?php
 function section($id, $hide = false) {
   echo '    <section id="'.$id.'"';

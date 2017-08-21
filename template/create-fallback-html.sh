@@ -2,6 +2,6 @@
 
 for i in "$@"; do
   cd "$i";
-  php index.php > model.html
+  php index.php > index.html
   cd -
 done
