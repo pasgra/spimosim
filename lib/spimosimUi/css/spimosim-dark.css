@@ -1,0 +1,204 @@
+.spimosim-dark * {
+  color: #E0E5F1;
+}
+
+body.spimosim-dark {
+  background-color: #2A2C33;
+}
+
+.spimosim-dark .plot-box {
+  background-color: #101219;
+  box-shadow: inset 0 -1rem 1rem -1rem white;
+}
+
+.spimosim-dark section {
+  background-color: #101219;
+  box-shadow: 0 0 .5rem #101219;
+}
+
+.spimosim-dark a:link,
+.spimosim-dark a:visited {
+  color: #BBE2FF;
+}
+
+.spimosim-dark section a:link {
+  color: #94BBDB;
+}
+
+.spimosim-dark a:active {
+  color: #F1FFFF;
+  text-shadow: 0 0 .3rem #F1FFFF;
+}
+
+.spimosim-dark section a:active {
+  color: #E1FFFF;
+  text-shadow: 0 0 .3rem #E1FFFF;
+}
+
+.spimosim-dark a:focus, a:hover {
+  color: #BBE2FF;
+  text-shadow: 0 0 .3rem #BBE2FF;
+}
+
+.spimosim-dark section a:focus,
+.spimosim-dark section a:hover {
+  color: #CDF4FF;
+  text-shadow: 0 0 .3rem #CDF4FF;
+}
+
+.spimosim-dark select,
+.spimosim-dark input[type="text"],
+.spimosim-dark input[type="number"] {
+  box-shadow: 0 0 .5rem #101219;
+  color: #E0E5F1;
+  background-color: #2A2C33;
+}
+
+.spimosim-dark input.invalid {
+  box-shadow: 0 0 .5rem red;
+}
+
+.spimosim-dark .heading-button {
+  color: #E0E5F1;
+}
+
+.spimosim-dark .corner-menu-expanded {
+  background-color: #101219;
+  box-shadow: 0 0 .5rem #E0E5F1;
+}
+
+.spimosim-dark .dygraph-legend,
+.spimosim-dark .plot-menu,
+.spimosim-dark .plot-div {
+  background-color: #101219;
+}
+
+.spimosim-dark .expanded-video .playback-control,
+.spimosim-dark .create-plot-menu,
+.spimosim-dark .guess-table,
+.spimosim-dark .parameters {
+  background-color: #2A2C33;
+}
+
+.spimosim-dark .section-drag-bar:last-child::after {
+  background-color: transparent;
+}
+
+.spimosim-dark .dygraph-axis-label {
+  color: #E0E5F1;
+}
+
+.spimosim-dark .video-network .video-text,
+.spimosim-dark .canvas-frame {
+  background-image: radial-gradient(darkslategrey, black) !important;
+}
+
+.spimosim-dark .buffering {
+  background: url('../icon/buffering.svg') 50% 20% / 30% no-repeat !important;
+}
+
+.spimosim-dark .no-smil .buffering {
+  background: url('../icon/buffering-css.svg') 50% 20% / 30% no-repeat !important;
+}
+
+.spimosim-dark .video-network .video-text.buffering {
+  background: url('../icon/buffering.svg') 50% 20% / 30% no-repeat, radial-gradient(darkslategrey, black) !important;
+}
+
+.spimosim-dark .no-smil .video-network .video-text.buffering {
+  background: url('../icon/buffering-css.svg') 50% 20% / 30% no-repeat, radial-gradient(darkslategrey, black) !important;
+}
+
+.spimosim-dark .section-drag-bar:not(:last-child) {
+  background-image: url(../icon/light/grab.svg) !important;
+}
+
+.spimosim-dark .plot-description::before,
+.spimosim-dark .description-over-plot::before,
+.spimosim-dark .explanation:not(section)::before {
+  background-image: url(../icon/light/info.svg) !important;
+}
+
+.spimosim-dark .plot-settings .open-corner-menu {
+  background-image: url(../icon/light/settings.svg) !important;
+}
+
+.spimosim-dark .simulation-menu {
+  background-image: url(../icon/light/settings.svg) !important;
+}
+
+.spimosim-dark .simulation-menu-running {
+  background-image: url(../icon/light/settings-rotating.svg) !important;
+}
+
+.spimosim-dark.no-smil .simulation-menu-running {
+  background-image: url(../icon/light/settings-rotating-css.svg) !important;
+}
+
+.spimosim-dark .time-plus {
+  background-image: url(../icon/light/time-plus.svg) !important;
+}
+
+.spimosim-dark .endless-mode {
+  background-image: url(../icon/light/endless-mode.svg) !important;
+}
+
+.spimosim-dark .ending-mode {
+  background-image: url(../icon/light/ending-mode.svg) !important;
+}
+
+.spimosim-dark .restart {
+  background-image: url(../icon/light/restart.svg) !important;
+}
+
+.spimosim-dark .delete-old-data {
+  background-image: url(../icon/light/delete-old-data.svg) !important;
+}
+
+.spimosim-dark .next-model {
+  background-image: url('../icon/light/next-model.svg') !important;
+}
+
+.spimosim-dark .prev-model {
+  background-image: url('../icon/light/prev-model.svg') !important;
+}
+
+.spimosim-dark .plot-div:empty {
+  background-image: url('../icon/light/drawing.svg') !important;
+}
+
+.spimosim-dark.no-smil .plot-div:empty {
+  background-image: url('../icon/light/drawing-css.svg') !important;
+}
+
+.spimosim-dark .play-button {
+  background-image: url('../icon/light/play.svg') !important;
+}
+
+.spimosim-dark .pause-button {
+  background-image: url('../icon/light/pause.svg') !important;
+}
+
+.spimosim-dark .skip-to-first {
+  background-image: url('../icon/light/skip-to-first.svg') !important;
+}
+
+.spimosim-dark .skip-to-last {
+  background-image: url('../icon/light/skip-to-last.svg') !important;
+}
+
+.spimosim-dark .plot-tools {
+  background-image: url('../icon/light/tools.svg') !important;
+}
+
+.spimosim-dark .close {
+  background-image: url('../icon/light/close.svg') !important;
+}
+
+.spimosim-dark .ok {
+  background-image: url('../icon/light/ok.svg') !important;
+}
+
+.spimosim-dark .dygraph-title:hover {
+  background-image: url(../icon/light/grab.svg) !important;
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+  width="16"
+  height="16"
+  viewBox="0 0 16 16"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  <path
+    style="fill:none; stroke:#94BBDB; stroke-width:1px"
+    d="m 1.5,1 0,14" />
+  <path
+    style="fill:none; stroke:#94BBDB; stroke-width:1px"
+    d="m 10.5,1 4,7 -4,7" />
+  <g>
+    <path
+      style="fill:none; stroke:#94BBDB; stroke-width:1px"
+      d="m 6.5,2 0,13 m -3,-8 3,-5 3,5">
+      <animateTransform
+        attributeType="xml"
+        attributeName="transform"
+        begin="0s"
+        dur="1s"
+        type="scale"
+        values="1 1;1 -1;1 1"
+        repeatCount="indefinite" />
+    </path>
+    <animateTransform
+      attributeType="xml"
+      attributeName="transform"
+      begin="0s"
+      dur="1s"
+      type="translate"
+      values="0 0;0 16;0 0"
+      repeatCount="indefinite" />
+  </g>
+</svg>

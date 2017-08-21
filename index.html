@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="lib/spimosimUi/css/spimosim.css" />
+  <link rel="stylesheet" href="lib/spimosimUi/css/spimosim-dark.css" />
+  <link rel="icon" href="lib/spimosimUi/icon/favicon.svg" />
+  <title>SpiMoSim – A modular javascript library for interactive physical models</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    
+    h1 {
+      display: block;
+      text-align: center;
+      font-size: 3rem;
+    }
+    #spimosim {
+      margin: -.5rem -.5rem 0 -.5rem;
+      border: 0;
+    }
+    #spimosim>header {
+      display: none;
+    }
+    #spimosim>header:last-child {
+      width: 100%;
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      font-weight: bold;
+      font-size: 5rem;
+      text-align: center;
+      height: 8rem;
+    }
+    .abstract {
+      font-weight: bold;
+    }
+    .footnote {
+      font-size: small;
+    }
+    .footnotes {
+      border-top: 2px solid;
+      margin-top: 8rem;
+    }
+    sup a:link {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="spimosim" /><header>SpiMoSim</header></div>
+  <div class="main">
+  <section class="main-info">
+    <h1>About the library</h1>
+    <p class="abstract">A modular javascript library for interactive physical models (mostly agent based models) by Pascal Grafe</p>
+    
+    <h2>Where does it run?</h2>
+    <p>If you see an animated SpiMoSim logo on top of this page, SpiMoSim is running right now in your browser! <sup><a href="#footnote1">1</a></sup></p>
+    <p>Every application built with SpiMoSim will <sup><a href="#footnote2">2</a></sup> run in every modern Browsers on desktop computers as well as on smartphones and tablet computers because it only relies on web technologies like HTML, Javascript and CSS. <a href='https://blogs.oracle.com/java-platform-group/moving-to-a-plugin-free-web'>(Java is dead!)</a></p>
+    <h2>How to build applications with SpiMoSim?</h2>
+    <p>You do not need to be a web developer to get startet with SpiMoSim. You need to know a <i>little</i> <a href="https://www.w3schools.com/js/">Javascript</a>. <a href="#TODO">Download the example application</a> (Ising model) and give it a try!</p>
+    
+    <h2>It is free software!</h2>
+    <p>SpiMoSim is published under the terms and conditions of the <a href="LICENSE.txt">MIT-LICENSE</a>.</p>
+    <div class="footnotes">
+      <p id="footnote1" class="footnote">
+        <sup>1</sup>What you see is the Multiple Epidemics Model by K. Sneppen et al. run on a 2D lattice (connections between the <i>text</i> and the <i>background</i> were removed):
+        <p class="paper">Sneppen K, Trusina A, Jensen MH, Bornholdt S (2010) A Minimal Model for Multiple Epidemics and Immunity Spreading. PLoS ONE 5(10): e13326.
+        <a href="http://doi.org/doi:10.1371/journal.pone.0013326">doi:10.1371/journal.pone.0013326</a><p>
+      </p>
+      <p id="footnote2" class="footnote">
+        <sup>2</sup>If it does not, <a href="#TODO">let me know!</a>
+      </p>
+    </div>
+  </section>
+  
+  <section class="main-info">
+    <h1>Demonstrations</h1>
+    <h2>General</h2>
+    <ul>
+      <li>
+        <a href="ising">Ising Model</a>
+        <p>A simple demonstration of the Ising model. This is the version included in the download.</p>
+      </li>
+      <li>
+        <a href="http://spimosim.pascalgrafe.net/full">The Bornholdt Model with strategy spins</a>
+        <p>A fully featured version of the market model by S. Bornholdt <sup><a href="#footnote3">3</a></p>
+      </li>
+    </ul>
+    
+    <h2>Others</h2>
+    <p>More demonstrations can be found at <a href="http://www.itp.uni-bremen.de/complex/interactive-models">Complex Systems Lab.</a></p>
+    <p>Please let me know if you use SpiMoSim for your own projects.</p>
+    <div class="footnotes">
+      <p id="footnote3" class="footnote">
+        <p class="paper"><sup>3</sup>S. Bornholdt, Expectation bubbles in a spin model of markets: Intermittency from frustration across scales, Int. J. Mod. Phys. C, Vol. 12, No. 5 (2001) 667-674.</p>
+      </p>
+    </div>
+  </section>
+</div>
+</div>
+<footer>
+  <div>
+    
+  </div>
+  <div>
+    <div class="author">
+      Powered by 
+      <a href="http://www.itp.uni-bremen.de/~pgrafe/spimosim">SpiMoSim</a> by
+      <a href="http://www.itp.uni-bremen.de/~pgrafe">Pascal Grafe</a>
+    </div>
+  </div>
+</footer>
+<script src="ext_lib/lib/jquery/jquery-3.1.1.min.js"></script>
+<script src="ext_lib/lib/jquery_mousewheel/jquery.mousewheel.min.js"></script>
+<script src="ext_lib/lib/jqueryui/jquery-ui.min.js"></script>
+<script src="ext_lib/lib/modernizr/modernizr-custom.js"></script>
+<script src="ext_lib/lib/dygraph/dygraph-2.0.0.min.js"></script>
+<script src="ext_lib/lib/gif.js/gif.js"></script>
+<script src="ext_lib/lib/numeric/numeric-1.2.8-2.min.js"></script>
+<script src="ext_lib/lib/vis.js/vis-network.min.js"></script>
+
+<script src="lib/spimosimCore/polyfill.js"></script>
+<script src="lib/spimosimCore/tools.js"></script>
+<script src="lib/spimosimCore/spimosimCore.js"></script>
+<script src="lib/spimosimCore/protocol-vars.js"></script>
+<script src="lib/spimosimCore/network-config.js"></script>
+
+<script src="lib/spimosimUi/polyfill.js"></script>
+<script src="lib/spimosimUi/graphic-tools.js"></script>
+<script src="lib/spimosimUi/spimosimUi.js"></script>
+
+<script src="lib/spimosimUi/network-ui-config.js"></script>
+<script src="lib/spimosimUi/video.js"></script>
+<script src="lib/spimosimUi/draw-modes.js"></script>
+<script src="lib/spimosimUi/var-initializers.js"></script>
+<script>
+spimosimCore.modules.add('ModelConfig', 'Spimosim Epidemic', {
+  info: {
+    title: 'Epidemics Model',
+  },
+  clock: {
+    fps: {
+      value: 50
+    }
+  },
+  controls: {
+    networkTypes: [
+      'spimosim'
+    ],
+    stateVariables: {
+      s: {
+        type: 'Uint16Array',
+        name: 'opinion',
+      },
+    },
+    parameters: {
+      differentOpinions: {
+        labelText: 'Maximum number of deseases',
+        key: 'o',
+        min: 1,
+        value: 1,
+        max: 256 * 256 - 1,
+        type: 'number'
+      },
+      alpha: {
+        labelText: 'Mutation rate α',
+        key: 'a',
+        min: 0,
+        value: 15e-6,
+        max: 1,
+        step: '5e-7',
+        type: 'number'
+      }
+    },
+    updateAlgorithms: {
+      'random-sequential-update': 'Random sequential update',
+      //'random-serial-update': 'Random serial update',
+    }
+  },
+  simulation: {
+    backend: {
+      type: 'webworker',
+      workerUrl: 'lib/spimosimCore/spimosimCore.simulation.worker.js',
+      urls: [
+        '../../epidemics-model.js'
+      ],
+      name: 'epidemics'
+    }
+  },
+  video: {
+    gifWorkerUrl: 'ext_lib/lib/gif.js/gif.worker.js',
+    drawModes: {
+      type: 'int map',
+      names: [ 's' ],
+      minValues: [ 0 ]
+    }
+  }
+});
+var initializer;
+onload = function () {
+  initializer = new spimosimUi.Initializer({
+    videoSections: [$('#spimosim')[0]]
+  });
+  initializer.changeModel(spimosimCore.modules.get('ModelConfig', 'Spimosim Epidemic'));
+}
+</script>
+</body>
+</html>

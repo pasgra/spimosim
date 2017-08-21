@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+  width="100"
+  height="16"
+  viewBox="0 0 100 16"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  <path
+    style="fill:none; stroke:#ffffff; stroke-width:1px"
+    d="m 1.5,1 0,14" />
+  <path
+    style="fill:none; stroke:#ffffff; stroke-width:1px"
+    d="m 93.5,1 4,7 -4,7" />
+  <g>
+    <path
+      style="fill:none; stroke:#ffffffff; stroke-width:1px"
+      d="m 6.5,2 0,13 m -3,-8 3,-5 3,5">
+      <animateTransform
+        attributeType="xml"
+        attributeName="transform"
+        type="scale"
+        values="1 1;1 -1;1 1; 1 1"
+        keyTimes="0; 0.25; .5; 1"
+        dur="3s"
+        repeatCount="indefinite" />
+    </path>
+    <animateTransform
+      attributeType="xml"
+      attributeName="transform"
+      type="translate"
+      values="0 0;0 16;0 0;0 0"
+      keyTimes="0; 0.25; .5; 1"
+      dur="3s"
+      repeatCount="indefinite" />
+  </g>
+  <g>
+    <path
+      style="fill:none; stroke:#ffffffe7; stroke-width:1px"
+      d="m 16.5,2 0,13 m -3,-8 3,-5 3,5">
+      <animateTransform
+        attributeType="xml"
+        attributeName="transform"
+        type="scale"
+        values="1 1;1 -1;1 1; 1 1"
+        begin="0.2s"
+        keyTimes="0; 0.25; .5; 1"
+        dur="3s"
+        repeatCount="indefinite" />
+    </path>
+    <animateTransform
+      attributeType="xml"
+      attributeName="transform"
+      type="translate"
+      values="0 0;0 16;0 0;0 0"
+      begin="0.2s"
+      keyTimes="0; 0.25; .5; 1"
+      dur="3s"
+      repeatCount="indefinite" />
+  </g>
+  <g>
+    <path
+      style="fill:none; stroke:#ffffffcf; stroke-width:1px"
+      d="m 26.5,2 0,13 m -3,-8 3,-5 3,5">
+      <animateTransform
+        attributeType="xml"
+        attributeName="transform"
+        type="scale"
+        values="1 1;1 -1;1 1; 1 1"
+        begin="0.4s"
+        keyTimes="0; 0.25; .5; 1"
+        dur="3s"
+        repeatCount="indefinite" />
+    </path>
+    <animateTransform
+      attributeType="xml"
+      attributeName="transform"
+      type="translate"
+      values="0 0;0 16;0 0;0 0"
+      begin="0.4s"
+      keyTimes="0; 0.25; .5; 1"
+      dur="3s"
+      repeatCount="indefinite" />
+  </g>
+  <g>
+    <path
+      style="fill:none; stroke:#ffffffb7; stroke-width:1px"
+      d="m 36.5,2 0,13 m -3,-8 3,-5 3,5">
+      <animateTransform
+        attributeType="xml"
+        attributeName="transform"
+        type="scale"
+        values="1 1;1 -1;1 1; 1 1"
+        begin="0.6s"
+        keyTimes="0; 0.25; .5; 1"
+        dur="3s"
+        repeatCount="indefinite" />
+    </path>
+    <animateTransform
+      attributeType="xml"
+      attributeName="transform"
+      type="translate"
+      values="0 0;0 16;0 0;0 0"
+      begin="0.6s"
+      keyTimes="0; 0.25; .5; 1"
+      dur="3s"
+      repeatCount="indefinite" />
+  </g>
+  <g>
+    <path
+      style="fill:none; stroke:#ffffff9f; stroke-width:1px"
+      d="m 46.5,2 0,13 m -3,-8 3,-5 3,5">
+      <animateTransform
+        attributeType="xml"
+        attributeName="transform"
+        type="scale"
+        values="1 1;1 -1;1 1; 1 1"
+        begin="0.8s"
+        keyTimes="0; 0.25; .5; 1"
+        dur="3s"
+        repeatCount="indefinite" />
+    </path>
+    <animateTransform
+      attributeType="xml"
+      attributeName="transform"
+      type="translate"
+      values="0 0;0 16;0 0;0 0"
+      begin="0.8s"
+      keyTimes="0; 0.25; .5; 1"
+      dur="3s"
+      repeatCount="indefinite" />
+  </g>
+  <g>
+    <path
+      style="fill:none; stroke:#ffffff87; stroke-width:1px"
+      d="m 56.5,2 0,13 m -3,-8 3,-5 3,5">
+      <animateTransform
+        attributeType="xml"
+        attributeName="transform"
+        type="scale"
+        values="1 1;1 -1;1 1; 1 1"
+        begin="1s"
+        keyTimes="0; 0.25; .5; 1"
+        dur="3s"
+        repeatCount="indefinite" />
+    </path>
+    <animateTransform
+      attributeType="xml"
+      attributeName="transform"
+      type="translate"
+      values="0 0;0 16;0 0;0 0"
+      begin="1s"
+      keyTimes="0; 0.25; .5; 1"
+      dur="3s"
+      repeatCount="indefinite" />
+  </g>
+  <g>
+    <path
+      style="fill:none; stroke:#ffffff6f; stroke-width:1px"
+      d="m 66.5,2 0,13 m -3,-8 3,-5 3,5">
+      <animateTransform
+        attributeType="xml"
+        attributeName="transform"
+        type="scale"
+        values="1 1;1 -1;1 1; 1 1"
+        begin="1.2s"
+        keyTimes="0; 0.25; .5; 1"
+        dur="3s"
+        repeatCount="indefinite" />
+    </path>
+    <animateTransform
+      attributeType="xml"
+      attributeName="transform"
+      type="translate"
+      values="0 0;0 16;0 0;0 0"
+      begin="1.2s"
+      keyTimes="0; 0.25; .5; 1"
+      dur="3s"
+      repeatCount="indefinite" />
+  </g>
+  <g>
+    <path
+      style="fill:none; stroke:#ffffff57; stroke-width:1px"
+      d="m 76.5,2 0,13 m -3,-8 3,-5 3,5">
+      <animateTransform
+        attributeType="xml"
+        attributeName="transform"
+        type="scale"
+        values="1 1;1 -1;1 1; 1 1"
+        begin="1.6s"
+        keyTimes="0; 0.25; .5; 1"
+        dur="3s"
+        repeatCount="indefinite" />
+    </path>
+    <animateTransform
+      attributeType="xml"
+      attributeName="transform"
+      type="translate"
+      values="0 0;0 16;0 0;0 0"
+      begin="1.6s"
+      keyTimes="0; 0.25; .5; 1"
+      dur="3s"
+      repeatCount="indefinite" />
+  </g>
+  <g>
+    <path
+      style="fill:none; stroke:#ffffff3f; stroke-width:1px"
+      d="m 86.5,2 0,13 m -3,-8 3,-5 3,5">
+      <animateTransform
+        attributeType="xml"
+        attributeName="transform"
+        type="scale"
+        values="1 1;1 -1;1 1; 1 1"
+        begin="1.8s"
+        keyTimes="0; 0.25; .5; 1"
+        dur="3s"
+        repeatCount="indefinite" />
+    </path>
+    <animateTransform
+      attributeType="xml"
+      attributeName="transform"
+      type="translate"
+      values="0 0;0 16;0 0;0 0"
+      begin="1.8s"
+      keyTimes="0; 0.25; .5; 1"
+      dur="3s"
+      repeatCount="indefinite" />
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+  width="100"
+  height="16"
+  viewBox="0 0 100 16"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes flip {
+      0% {
+        transform: rotateX(0deg);
+      }
+
+      25% {
+        transform: rotateX(180deg);
+      }
+      
+      50% {
+        transform: rotateX(0deg);
+      }
+      
+      100% {
+        transform: rotateX(0deg);
+      }
+    }
+  </style>
+  <path
+    style="fill:none; stroke:#ffffff; stroke-width:1px"
+    d="m 1.5,1 0,14" />
+  <path
+    style="fill:none; stroke:#ffffff; stroke-width:1px"
+    d="m 93.5,1 4,7 -4,7" />
+  <path
+    style="fill:none; stroke:#ffffffff; stroke-width:1px; animation-delay:0s.0; transform-origin:8px 8px; transform:rotateX(360deg); animation-name:flip; animation-duration:3s; animation-iteration-count:infinite; "
+    d="m 6.5,2 0,13 m -3,-8 3,-5 3,5" />
+  <path
+    style="fill:none; stroke:#ffffffe7; stroke-width:1px; animation-delay:0.2s; transform-origin:8px 8px; transform:rotateX(360deg); animation-name:flip; animation-duration:3s; animation-iteration-count:infinite; "
+    d="m 16.5,2 0,13 m -3,-8 3,-5 3,5" />
+  <path
+    style="fill:none; stroke:#ffffffcf; stroke-width:1px; animation-delay:0.4s; transform-origin:8px 8px; transform:rotateX(360deg); animation-name:flip; animation-duration:3s; animation-iteration-count:infinite; "
+    d="m 26.5,2 0,13 m -3,-8 3,-5 3,5" />
+  <path
+    style="fill:none; stroke:#ffffffb7; stroke-width:1px; animation-delay:0.6s; transform-origin:8px 8px; transform:rotateX(360deg); animation-name:flip; animation-duration:3s; animation-iteration-count:infinite; "
+    d="m 36.5,2 0,13 m -3,-8 3,-5 3,5" />
+  <path
+    style="fill:none; stroke:#ffffff9f; stroke-width:1px; animation-delay:0.8s; transform-origin:8px 8px; transform:rotateX(360deg); animation-name:flip; animation-duration:3s; animation-iteration-count:infinite; "
+    d="m 46.5,2 0,13 m -3,-8 3,-5 3,5" />
+  <path
+    style="fill:none; stroke:#ffffff87; stroke-width:1px; animation-delay:1.0s; transform-origin:8px 8px; transform:rotateX(360deg); animation-name:flip; animation-duration:3s; animation-iteration-count:infinite; "
+    d="m 56.5,2 0,13 m -3,-8 3,-5 3,5" />
+  <path
+    style="fill:none; stroke:#ffffff6f; stroke-width:1px; animation-delay:1.2s; transform-origin:8px 8px; transform:rotateX(360deg); animation-name:flip; animation-duration:3s; animation-iteration-count:infinite; "
+    d="m 66.5,2 0,13 m -3,-8 3,-5 3,5" />
+  <path
+    style="fill:none; stroke:#ffffff57; stroke-width:1px; animation-delay:1.4s; transform-origin:8px 8px; transform:rotateX(360deg); animation-name:flip; animation-duration:3s; animation-iteration-count:infinite; "
+    d="m 76.5,2 0,13 m -3,-8 3,-5 3,5" />
+  <path
+    style="fill:none; stroke:#ffffff3f; stroke-width:1px; animation-delay:1.6s; transform-origin:8px 8px; transform:rotateX(360deg); animation-name:flip; animation-duration:3s; animation-iteration-count:infinite; "
+    d="m 86.5,2 0,13 m -3,-8 3,-5 3,5" />
+</svg>

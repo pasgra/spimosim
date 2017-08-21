@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+  width="16"
+  height="16"
+  viewBox="0 0 16 16"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  <path
+    style="fill:none; stroke:#2f4f4f; stroke-width:1px">
+    <animate
+      attributeName="d"
+      dur="2s"
+      values="m 0,16;
+        m 0,16 2,-8;
+        m 0,16 2,-8 2,-1;
+        m 0,16 2,-8 2,-1 2,2;
+        m 0,16 2,-8 2,-1 2,2 2,-6;
+        m 0,16 2,-8 2,-1 2,2 2,-6 2,1;
+        m 0,16 2,-8 2,-1 2,2 2,-6 2,1 2,-1;
+        m 0,16 2,-8 2,-1 2,2 2,-6 2,1 2,-1 2,2;
+        m 0,16 2,-8 2,-1 2,2 2,-6 2,1 2,-1 2,2 2,-2"
+      repeatCount="indefinite" />
+  </path>
+</svg>

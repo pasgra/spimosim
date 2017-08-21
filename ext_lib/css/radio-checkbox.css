@@ -1,0 +1,142 @@
+/*This is a modified version of:
+http://maddesigns.de/individuelle-checkbox-radio-inputs-1396.html*/
+
+form ul {
+  list-style: none;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+input[type="checkbox"]:focus + label:before, input[type="checkbox"]:hover + label:before,
+input[type="radio"]:focus + label:before,
+input[type="radio"]:hover + label:before {
+  border-color: darkslategrey;
+}
+input[type="checkbox"]:active + label:before,
+input[type="radio"]:active + label:before {
+  -webkit-transition-duration: 0;
+          transition-duration: 0;
+  -webkit-filter: brightness(0.2);
+          filter: brightness(0.2);
+}
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  position: relative;
+  padding: .3rem;
+  padding-left: 2em;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before {
+  box-sizing: content-box;
+  content: '';
+  color: #4682b4;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  margin-top: -9px;
+  border: 2px solid slategrey;
+  text-align: center;
+}
+input[type="checkbox"] + label:after,
+input[type="radio"] + label:after {
+  box-sizing: content-box;
+  content: '';
+  background-color: #4682b4;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+
+input[type="checkbox"] + label:after {
+  background-color: transparent;
+  top: 50%;
+  left: 4px;
+  width: 8px;
+  height: 3px;
+  margin-top: -4px;
+  border-style: solid;
+  border-color: #4682b4;
+  border-width: 0 0 3px 3px;
+  -webkit-border-image: none;
+       -o-border-image: none;
+          border-image: none;
+  -webkit-transform: rotate(-45deg) scale(0);
+          transform: rotate(-45deg) scale(0);
+  -webkit-transition: none;
+  transition: none;
+}
+input[type="checkbox"]:checked + label:after {
+  content: '';
+  -webkit-transform: rotate(-45deg) scale(1);
+          transform: rotate(-45deg) scale(1);
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+
+input[type="radio"]:checked + label:before {
+  -webkit-animation: borderscale 300ms ease-in;
+          animation: borderscale 300ms ease-in;
+  background-color: white;
+}
+input[type="radio"]:checked + label:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+input[type="radio"] + label:before, input[type="radio"] + label:after {
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked + label:before {
+  -webkit-animation: borderscale 200ms ease-in;
+          animation: borderscale 200ms ease-in;
+}
+input[type="checkbox"]:checked + label:after {
+  -webkit-transform: rotate(-45deg) scale(1);
+          transform: rotate(-45deg) scale(1);
+}
+
+@-webkit-keyframes borderscale {
+  50% {
+    box-shadow: 0 0 0 2px #4682b4;
+  }
+}
+
+@keyframes borderscale {
+  50% {
+    box-shadow: 0 0 0 2px #4682b4;
+  }
+}

@@ -1,0 +1,123 @@
+/*
+ * A modified version of http://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html
+ */
+
+input[type=range] {
+    border: none;
+}
+
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 3px;
+    background: lightslategrey;
+    border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #4682b4;
+    margin-top: calc(-.5em + 1.5px);
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 2px slategrey;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+    box-shadow: 0 0 0 2px darkslategrey;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #4682b4;
+}
+
+input[type=range]::-moz-range-track {
+    height: 3px;
+    background: lightslategrey;
+    border: none;
+}
+
+input[type=range]:focus::-moz-range-track {
+    background: #4682b4;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #4682b4;
+}
+
+input[type=range]::-moz-range-thumb:hover {
+    box-shadow: 0 0 0 2px slategrey;
+}
+
+input[type=range]::-moz-range-thumb:active {
+    box-shadow: 0 0 0 2px darkslategrey;
+}
+
+input[type=range]::-ms-track {
+    height: 3px;
+
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: slategrey;
+    border-radius: 10px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #4682b4;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #4682b4;
+    border-radius: 10px;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: lightslategrey;
+}
+
+
+input[type=range]::-ms-thumb {
+    border: solid 2px lightslategrey;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #4682b4;
+}
+
+input[type=range]::-ms-thumb:hover {
+    box-shadow: 0 0 0 2px slategrey;
+}
+
+input[type=range]::-ms-thumb:active {
+    box-shadow: 0 0 0 2px darkslategrey;
+}
+
+
+input[type=range]:focus::-ms-fill-lower {
+    background: slategrey;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: lightslategrey;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+  width="16"
+  height="16"
+  viewBox="0 0 16 16"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes flip {
+      from {
+        transform: rotateX(0deg);
+      }
+
+      to {
+        transform: rotateX(360deg);
+      }
+    }
+  </style>
+  <path
+    style="fill:none; stroke:#94BBDB; stroke-width:1px"
+    d="m 1.5,1 0,14" />
+  <path
+    style="fill:none; stroke:#94BBDB; stroke-width:1px"
+    d="m 10.5,1 4,7 -4,7" />
+  <path
+    style="fill:none; stroke:#94BBDB; stroke-width:1px; transform-origin:8px 8px; transform:rotateX(360deg); animation-name:flip; animation-duration:1s; animation-iteration-count:infinite; "
+    d="m 6.5,2 0,13 m -3,-8 3,-5 3,5" />
+</svg>
