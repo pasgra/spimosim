@@ -136,6 +136,7 @@ label a {
 
 
 select,
+textarea,
 input[type=text],
 input[type=number] {
   border: inset 1px lightslategrey;
@@ -147,10 +148,19 @@ input[type=number] {
   color: darkslategrey;
 }
 
+textarea:disabled,
+select:disabled,
+input[type=number]:disabled,
+input[type=string]:disabled,
+input[type=text]:disabled {
+  background-color: transparent;
+}
+
 select {
   margin-right: .5rem;
 }
 
+textarea.invalid,
 input[type=text].invalid,
 input[type=number]:invalid {
   box-shadow: 0 0 .5rem red;
@@ -355,6 +365,8 @@ input[type="range"] {
 
 .time-plus {
   background-image: url(../icon/time-plus.svg) !important;
+  transition-duration: .3s;
+  transition-property: opacity;
 }
 
 .endless-mode {
@@ -681,18 +693,19 @@ input[type="range"] {
 }
 
 /* Settings */
+
+.model-settings {
+  padding-top: 1.4rem;
+}
+
 .settings>div {
   margin: 0rem -1rem;
   padding: .3rem 1rem;
   display: flex;
   flex-direction: row;
 }
-.model-settings {
-  padding-top: 1.4rem;
-}
-
-.model-settings h3,
-.model-settings h4 {
+.subdivided-settings h3,
+.subdivided-settings h4 {
   display: inline-block;
   font-size: medium;
   font-weight: normal;
@@ -704,23 +717,23 @@ input[type="range"] {
   flex-shrink: 0;
 }
 
-.model-settings h4 .bar,
-.model-settings h4 .bar + span {
+.subdivided-settings h4 .bar,
+.subdivided-settings h4 .bar + span {
   display: inline-block;
   margin: -.3rem 0 -.3rem 0;
   height: calc(100% + .6rem);
   vertical-align: bottom;
 }
 
-.model-settings h4 .bar {
+.subdivided-settings h4 .bar {
   content: ' ';
   margin: -.3rem 1rem -.3rem 0; 
   width: .3rem;
   background-color: darkslategrey;
 }
 
-.model-settings h3+div,
-.model-settings h4+div {
+.subdivided-settings h3+div,
+.subdivided-settings h4+div {
   display: inline-block;
   flex: 1;
 }
@@ -730,13 +743,16 @@ input[type="range"] {
   margin-bottom: .5rem;
 }
 
+.settings .text-setting,
 .settings .string-setting,
 .settings .select-setting,
 .settings .number-setting,
 .settings .range-setting {
   display: flex;
+  flex-wrap: wrap;
 }
 
+.settings .text-setting,
 .settings .string-setting,
 .settings .radio-setting,
 .settings .select-setting,
@@ -745,6 +761,7 @@ input[type="range"] {
   margin: .8rem 0;
 }
 
+.settings .text-setting label,
 .settings .string-setting label,
 .settings .select-setting label,
 .settings .number-setting label,
@@ -761,6 +778,7 @@ input[type="range"] {
   align-items: baseline;
 }
 
+.settings .text-setting textarea,
 .settings .string-setting input,
 .settings .select-setting select,
 .settings .number-setting input,
@@ -803,8 +821,48 @@ input[type="range"] {
   display: none;
 }
 
+.settings .setting-info {
+  flex-basis: 100%;
+}
+
+.tabs-setting input[type="radio"] + label::before,
+.tabs-setting input[type="radio"] + label::after {
+  display: none;
+}
+
+.tabs-setting input[type="radio"]+label {
+  background-color: darkslategrey;
+  border: 0;
+  box-shadow: 0 0 .2rem darkslategrey;
+  color: white;
+  cursor: pointer;
+  padding: .4rem 1rem;
+  margin-right: .2rem;
+  transition-property: box-shadow, background-color;
+  transition-duration: .3s;
+  background-size: contain;
+  opacity: .5;
+}
+
+.tabs-setting input[type="radio"]:hover+label,
+.tabs-setting input[type="radio"]:focus+label {
+  box-shadow: 0 0 .2rem slategrey;
+  background-color: slategrey;
+  opacity: .7;
+}
+
+.tabs-setting input[type="radio"]:checked+label {
+  opacity: 1;
+}
+
+.tabs-setting {
+  border-bottom: solid darkslategrey .1rem;
+  padding-bottom: 0 !important;
+  align-items: end;
+}
+
 .guess-table,
-.parameters {
+.highlighted-settings-section {
   background-color: #f0f4f7;
 }
 
@@ -830,11 +888,16 @@ input[type="range"] {
   margin: .2rem 0;
 }
 
+.settings .hidden-setting {
+  display: none;
+}
+
 /* Video */
 
 .canvas-frame {
   border: solid 1px #2D5373;
   width: calc(100% - 2px);
+  position: relative;
   line-height: 0;
 }
 
@@ -1217,6 +1280,7 @@ input[type="range"] {
 .plot-menu .radio-setting label,
 .plot-menu .number-setting label,
 .plot-menu .select-setting label,
+.plot-menu .text-setting label,
 .plot-menu .string-setting label {
   max-width: inherit;
 }

@@ -21,13 +21,14 @@ input[type="radio"] {
   position: absolute;
   width: 1px;
 }
-input[type="checkbox"]:focus + label:before, input[type="checkbox"]:hover + label:before,
-input[type="radio"]:focus + label:before,
-input[type="radio"]:hover + label:before {
+input[type="checkbox"]:focus:not(:disabled) + label:before,
+input[type="checkbox"]:hover:not(:disabled) + label:before,
+input[type="radio"]:focus:not(:disabled) + label:before,
+input[type="radio"]:hover:not(:disabled) + label:before {
   border-color: darkslategrey;
 }
-input[type="checkbox"]:active + label:before,
-input[type="radio"]:active + label:before {
+input[type="checkbox"]:active:not(:disabled) + label:before,
+input[type="radio"]:active:not(:disabled) + label:before {
   -webkit-transition-duration: 0;
           transition-duration: 0;
   -webkit-filter: brightness(0.2);
@@ -44,7 +45,7 @@ input[type="radio"] + label {
       -ms-user-select: none;
           user-select: none;
 }
-input[type="checkbox"] + label:before,
+input[type="checkbox"]:not(:disabled) + label:before,
 input[type="radio"] + label:before {
   box-sizing: content-box;
   content: '';
@@ -58,6 +59,7 @@ input[type="radio"] + label:before {
   border: 2px solid slategrey;
   text-align: center;
 }
+
 input[type="checkbox"] + label:after,
 input[type="radio"] + label:after {
   box-sizing: content-box;
@@ -127,6 +129,26 @@ input[type="checkbox"]:checked + label:before {
 input[type="checkbox"]:checked + label:after {
   -webkit-transform: rotate(-45deg) scale(1);
           transform: rotate(-45deg) scale(1);
+}
+input[type="radio"]:disabled + label:before {
+  border-style: dashed dotted;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+input[type="radio"]:checked:disabled + label:before {
+  background: transparent;
+}
+input[type="radio"]:checked:disabled + label:after {
+  border-style: dashed;
+  border-width: 2px;
+  background: transparent;
+  left: 2px;
+  margin-top: -7px;
+  -webkit-transform: rotate(-45deg) scale(0.7);
+          transform: rotate(-45deg) scale(0.7);
+}
+input[type="radio"]:checked:disabled + label {
+  background: transparent;
 }
 
 @-webkit-keyframes borderscale {

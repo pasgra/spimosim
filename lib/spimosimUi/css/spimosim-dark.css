@@ -47,6 +47,7 @@ body.spimosim-dark {
 }
 
 .spimosim-dark select,
+.spimosim-dark textarea,
 .spimosim-dark input[type="text"],
 .spimosim-dark input[type="number"] {
   box-shadow: 0 0 .5rem #101219;
@@ -54,6 +55,16 @@ body.spimosim-dark {
   background-color: #2A2C33;
 }
 
+.spimosim-dark textarea:disabled,
+.spimosim-dark select:disabled,
+.spimosim-dark input[type=number]:disabled,
+.spimosim-dark input[type=string]:disabled,
+.spimosim-dark input[type=text]:disabled {
+  background-color: #2A2C33A0;
+}
+
+
+.spimosim-dark textarea.invalid,
 .spimosim-dark input.invalid {
   box-shadow: 0 0 .5rem red;
 }
@@ -76,7 +87,7 @@ body.spimosim-dark {
 .spimosim-dark .expanded-video .playback-control,
 .spimosim-dark .create-plot-menu,
 .spimosim-dark .guess-table,
-.spimosim-dark .parameters {
+.spimosim-dark .highlighted-settings-section {
   background-color: #2A2C33;
 }
 
@@ -119,6 +130,14 @@ body.spimosim-dark {
   background-image: url(../icon/light/info.svg) !important;
 }
 
+.spimosim-dark .tabs-setting input[type="radio"]:checked+label {
+  background-color: lightslategrey;
+  box-shadow: 0 0 .2rem lightslategrey;
+}
+
+.spimosim-dark .tabs-setting {
+  border-bottom-color: black;
+}
 .spimosim-dark .plot-settings .open-corner-menu {
   background-image: url(../icon/light/settings.svg) !important;
 }

@@ -49,7 +49,7 @@ if (USE_DARK_THEME or USE_DARK_THEME_SWITCH) {
 if (USE_DARK_THEME) {
   echo 'spimosim-dark ';
 }
-?>has-header-image page">
+?>has-header-image">
   <h1 id="heading0" class="model-heading"></h1>
 
   <div class="main<?php if (APP_BEFORE_INFO) { echo " app-before-info"; } ?>">
@@ -61,10 +61,6 @@ function section($id, $hide = false) {
   }
   echo '>
 ';
-  if (MOVABLE_SECTIONS) {
-    echo '      <div class="section-drag-bar"></div>
-';
-  }
   echo '    </section>
 ';
 }
@@ -81,10 +77,7 @@ section('downloads0');
       <div class="used-libs">
         Used libraries:
         <ul>
-          <li class="used-lib"><a href="http://www.itp.uni-bremen.de/~pgrafe/spimosim/">spimosim</a><a class="lib-license" href="http://www.itp.uni-bremen.de/~pgrafe/spimosim/LICENSE.txt">(License)</a></li>,
-          <li class="used-lib"><a href="https://jquery.com/">jQuery</a><a class="lib-license" href="http://jquery.org/license">(License)</a></li>,
-          <li class="used-lib"><a href="https://github.com/jquery/jquery-mousewheel">jQuery-mousewheel</a><a class="lib-license" href="../ext_lib/lib/jquery_mousewheel/LICENSE.txt">(License)</a></li>,
-          <li class="used-lib"><a href="https://jqueryui.com/">jQueryUI</a><a class="lib-license" href="../ext_lib/lib/jqueryui/LICENSE.txt">(License)</a></li>,
+          <li class="used-lib"><a href="http://spimosim.pascalgrafe.net">spimosim</a><a class="lib-license" href="http://spimosim.pascalgrafe.net/LICENSE.md">(License)</a></li>,
           <li class="used-lib"><a href="https://modernizr.com/">Modernizr</a><a class="lib-license" href="../ext_lib/lib/modernizr/modernizr-custom.js">(License)</a></li>,
           <li class="used-lib"><a href="http://dygraphs.com/">Dygraph</a><a class="lib-license" href="../ext_lib/lib/dygraph/dygraph-2.0.0.min.js">(License)</a></li>,
           <li class="used-lib"><a href="https://jnordberg.github.io/gif.js/">gif.js</a><a class="lib-license" href="../ext_lib/lib/gif.js/LICENSE">(License)</a></li>,
@@ -94,14 +87,10 @@ section('downloads0');
       </div>
       <div class="author">
         Powered by 
-        <a href="http://www.itp.uni-bremen.de/~pgrafe/spimosim">SpiMoSim</a> by
-        <a href="http://www.itp.uni-bremen.de/~pgrafe">Pascal Grafe</a>
+        <a href="http://spimosim.pascalgrafe.net">SpiMoSim</a> by Pascal Grafe
       </div>
     </div>
   </footer>
-  <script src="../ext_lib/lib/jquery/jquery-3.1.1.min.js"></script>
-  <script src="../ext_lib/lib/jquery_mousewheel/jquery.mousewheel.min.js"></script>
-  <script src="../ext_lib/lib/jqueryui/jquery-ui.min.js"></script>
   <script src="../ext_lib/lib/modernizr/modernizr-custom.js"></script>
   <script src="../ext_lib/lib/dygraph/dygraph-2.0.0.min.js"></script>
   <script src="../ext_lib/lib/gif.js/gif.js"></script>
@@ -130,11 +119,17 @@ if (null !== MAX_NODES) {
   <script src="../lib/spimosimUi/var-initializers.js"></script>
 
   <script src="../lib/modelChanger/model-changer.js"></script>
+<?php
+if (MOVABLE_SECTIONS) {
+  echo '  <script src="../lib/movableSections/movable-sections.js"></script>
+';
+}
+?>
   <script src="../template/generateHelpText.js"></script>
 
 <?php
 if (USE_DARK_THEME_SWITCH) {
-  echo'  <script src="../lib/spimosimUi/darkThemeSwitch.js"></script>
+  echo '  <script src="../lib/spimosimUi/darkThemeSwitch.js"></script>
 ';
 }
 
@@ -147,37 +142,32 @@ foreach (array_merge(MODEL_CONFIG_URLS, PLOT_DISPLAY_URLS, DATA_AGGREGATOR_URLS)
   <script>
 var modelChanger;
 onload = function () {
+  if (!modelChanger) {
+    modelChanger = new ModelChanger(
+      document.getElementById('heading0'),
+      <?php echo MODEL_IDS; ?>,
+      {
+        downloads: document.getElementById('downloads0'),
+        info: document.getElementById('info0'),
+        help: document.getElementById('help0'),
+        plotter: [
+          document.getElementById('plotter0'),
+        ],
+        video: [
+        <?php for ($i = 0; $i < N_VIDEOS; $i++) {?>
+          document.getElementById('video0'),
+        <?php } ?>
+        ],
+        controls: document.getElementById('controls0')
+    });
+  }
 <?php
 if (MOVABLE_SECTIONS) {
 ?>
-  // Make sections movable
-  graphicTools.enableDragAndDropMove('.main', undefined, '.section-drag-bar');
-  $('.section-drag-bar').on('dblclick', function (e) {
-    this.parentNode.classList.toggle('whole-width');
-    $(window).trigger('resize');
-  });
+    makeSectionsMovable(document.getElementsByClassName('main')[0]);
 <?php
 }
 ?>
-  if (!modelChanger) {
-    modelChanger = new ModelChanger(
-      $('#heading0')[0],
-      <?php echo MODEL_IDS; ?>,
-      {
-        downloadsSection: $('#downloads0')[0],
-        infoSection: $('#info0')[0],
-        helpSection: $('#help0')[0],
-        plotterSections: [
-          $('#plotter0')[0],
-        ],
-        videoSections: [
-        <?php for ($i = 0; $i < N_VIDEOS; $i++) {?>
-          $('#video0')[0],
-        <?php } ?>
-        ],
-        controlsSection: $('#controls0')[0]
-    });
-  }
 };
   </script>
 </body>

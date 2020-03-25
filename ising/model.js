@@ -44,7 +44,7 @@ IsingModel.prototype.changeSettings = function (settings, restart) {
      ) {
 
     // Generate adjacency lists
-    this.adjacencyLists = spimosimCore.networkRegister.generateAdjacencyLists(settings);
+    this.adjacencyLists = spimosimNetwork.networkRegister.generateAdjacencyLists(settings.network);
   
     // Number of nodes
     this.n = this.adjacencyLists.length;

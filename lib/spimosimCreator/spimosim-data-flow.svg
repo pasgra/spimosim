@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by diasvg.py -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="975"
+   height="300"
+   viewBox="-0.174 4.884 974.99993 299.99999"
+   version="1.1"
+   id="svg103"
+   sodipodi:docname="spimosim-data-flow.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata109">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs107" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1029"
+     id="namedview105"
+     showgrid="false"
+     inkscape:zoom="1.2876383"
+     inkscape:cx="618.03984"
+     inkscape:cy="87.696863"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Hintergrund"
+     scale-x="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="-0.1"
+     fit-margin-bottom="0"
+     units="px" />
+  <!-- Layer: Hintergrund -->
+  <g
+     id="Hintergrund"
+     transform="translate(-0.15092633,0.67013297)">
+    <!-- Standard - Line -->
+    <line
+       x1="877.83954"
+       y1="247.9653"
+       x2="877.83954"
+       y2="145.04446"
+       id="line2"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <polygon
+       points="47.25,12.612 47,12.487 46.75,12.612 47,12.112 "
+       id="polygon4"
+       style="fill:#000000;stroke:#000000;stroke-width:0.02645833;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(18.668763,0,0,18.668763,0.40768159,-88.072397)" />
+    <!-- Standard - Line -->
+    <line
+       x1="93.751488"
+       y1="172.3755"
+       x2="93.751488"
+       y2="145.04446"
+       id="line6"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <polygon
+       points="5.25,12.612 5,12.487 4.75,12.612 5,12.112 "
+       id="polygon8"
+       style="fill:#000000;stroke:#000000;stroke-width:0.02645833;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(18.668763,0,0,18.668763,0.40768159,-88.072397)" />
+    <!-- Standard - Line -->
+    <line
+       x1="187.09529"
+       y1="117.284"
+       x2="215.34111"
+       y2="117.284"
+       id="line10"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <polygon
+       points="11.388,11.25 11.513,11 11.388,10.75 11.888,11 "
+       id="polygon12"
+       style="fill:#000000;stroke:#000000;stroke-width:0.02645833;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(18.668763,0,0,18.668763,0.40768159,-88.072397)" />
+    <!-- Standard - Line -->
+    <line
+       x1="410.65378"
+       y1="117.284"
+       x2="439.36624"
+       y2="117.284"
+       id="line14"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <polygon
+       points="23.388,11.25 23.513,11 23.388,10.75 23.888,11 "
+       id="polygon16"
+       style="fill:#000000;stroke:#000000;stroke-width:0.02645833;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(18.668763,0,0,18.668763,0.40768159,-88.072397)" />
+    <!-- Standard - Line -->
+    <line
+       x1="560.47052"
+       y1="117.284"
+       x2="588.71637"
+       y2="117.284"
+       id="line18"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <polygon
+       points="31.388,11.25 31.513,11 31.388,10.75 31.888,11 "
+       id="polygon20"
+       style="fill:#000000;stroke:#000000;stroke-width:0.02645833;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(18.668763,0,0,18.668763,0.40768159,-88.072397)" />
+    <!-- Standard - Line -->
+    <line
+       x1="784.49573"
+       y1="117.284"
+       x2="812.74146"
+       y2="117.284"
+       id="line22"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <polygon
+       points="43.388,11.25 43.513,11 43.388,10.75 43.888,11 "
+       id="polygon24"
+       style="fill:#000000;stroke:#000000;stroke-width:0.02645833;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(18.668763,0,0,18.668763,0.40768159,-88.072397)" />
+    <!-- Standard - BezierLine -->
+    <path
+       d="M 560.47054,107.9496 C 616.47683,61.277701 401.78608,61.277701 442.03591,101.52755"
+       id="path26"
+       style="fill:none;stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <polygon
+       points="23.391,10.244 23.656,10.156 23.744,9.891 23.921,10.421 "
+       id="polygon28"
+       style="fill:#000000;stroke:#000000;stroke-width:0.02645833;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(18.668763,0,0,18.668763,0.40768159,-88.072397)" />
+    <!-- Flowchart - Internal Storage -->
+    <rect
+       x="597.80804"
+       y="98.615227"
+       width="186.68762"
+       height="37.337524"
+       rx="0.000"
+       id="rect30"
+       style="fill:#f0f4f7;stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <line
+       x1="616.47681"
+       y1="98.615227"
+       x2="616.47681"
+       y2="135.95276"
+       id="line32"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <line
+       x1="597.80804"
+       y1="102.34897"
+       x2="784.49573"
+       y2="102.34897"
+       id="line34"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <text
+       x="700.48621"
+       y="122.88463"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text36"
+       style="font-style:normal;font-weight:400;font-size:13.14134979px;font-family:sans;text-anchor:middle;fill:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none">State variable storage</text>
+    <!-- Flowchart - Document -->
+    <path
+       d="m 597.80806,173.29027 h 186.6876 v 49.78959 c -37.33747,-8.3076 -56.00623,-8.3076 -93.34378,0 -37.33753,8.28895 -56.00628,8.28895 -93.34382,0 z"
+       id="path38"
+       style="fill:#4682b4;stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <text
+       x="691.15186"
+       y="197.76501"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text40"
+       style="font-style:normal;font-weight:400;font-size:13.14134979px;font-family:sans;text-anchor:middle;fill:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none">State variable configuration</text>
+    <!-- Flowchart - Document -->
+    <path
+       d="M 0.40768159,173.29027 H 187.0953 v 49.78959 c -37.33752,-8.3076 -56.00629,-8.3076 -93.343811,0 -37.337522,8.28895 -56.006283,8.28895 -93.34380741,0 z"
+       id="path42"
+       style="fill:#4682b4;stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <text
+       x="93.751488"
+       y="197.76501"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text44"
+       style="font-style:normal;font-weight:400;font-size:13.14134979px;font-family:sans;text-anchor:middle;fill:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none">Parameter configuration</text>
+    <!-- Standard - Line -->
+    <line
+       x1="691.15186"
+       y1="173.29027"
+       x2="691.15186"
+       y2="145.04446"
+       id="line46"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <polygon
+       points="37.25,12.612 37,12.487 36.75,12.612 37,12.112 "
+       id="polygon48"
+       style="fill:#000000;stroke:#000000;stroke-width:0.02645833;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(18.668763,0,0,18.668763,0.40768159,-88.072397)" />
+    <!-- Flowchart - Display -->
+    <path
+       d="m 843.1716,98.615228 h 106.67332 c 15.99912,7.467512 21.3384,11.201252 21.3384,18.668762 0,7.4675 -5.33928,11.20126 -21.3384,18.66875 H 843.1716 l -21.33841,-18.66875 z"
+       id="path50"
+       style="fill:#f0f4f7;stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <text
+       x="896.50824"
+       y="121.01775"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text52"
+       style="font-style:normal;font-weight:400;font-size:13.14134979px;font-family:sans;text-anchor:middle;fill:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none">Visualization</text>
+    <!-- Flowchart - Manual Input -->
+    <path
+       d="M 0.40768159,27.673931 187.0953,5.2714152 V 61.277701 H 0.40768159 Z"
+       id="path54"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <text
+       x="93.751488"
+       y="48.209572"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text56"
+       style="font-style:normal;font-weight:400;font-size:13.14134979px;font-family:sans;text-anchor:middle;fill:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none">User changes parameters</text>
+    <!-- Flowchart - Manual Input -->
+    <path
+       d="M 821.83319,27.673931 971.18332,5.2714152 V 61.277701 H 821.83319 Z"
+       id="path58"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <text
+       x="896.50824"
+       y="48.209572"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text60"
+       style="font-style:normal;font-weight:400;font-size:13.14134979px;font-family:sans;text-anchor:middle;fill:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none">User navigates data</text>
+    <!-- Flowchart - Predefined Process -->
+    <rect
+       x="224.43282"
+       y="98.615227"
+       width="186.2209"
+       height="37.337524"
+       rx="0.000"
+       id="rect62"
+       style="fill:#4682b4;stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <line
+       x1="243.04555"
+       y1="98.615227"
+       x2="243.04555"
+       y2="135.95276"
+       id="line64"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <line
+       x1="392.02228"
+       y1="98.615227"
+       x2="392.02228"
+       y2="135.95276"
+       id="line66"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <text
+       x="317.53397"
+       y="121.01775"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text68"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;font-family:monospace;-inkscape-font-specification:monospace;text-anchor:middle;fill:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none">model.changeSettings()</text>
+    <!-- Flowchart - Predefined Process -->
+    <rect
+       x="448.45801"
+       y="98.615227"
+       width="112.01257"
+       height="37.337524"
+       rx="0.000"
+       id="rect70"
+       style="fill:#4682b4;stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <line
+       x1="459.65921"
+       y1="98.615227"
+       x2="459.65921"
+       y2="135.95276"
+       id="line72"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <line
+       x1="549.26929"
+       y1="98.615227"
+       x2="549.26929"
+       y2="135.95276"
+       id="line74"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <text
+       x="504.46426"
+       y="121.01775"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text76"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;font-family:monospace;-inkscape-font-specification:monospace;text-anchor:middle;fill:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none">model.step()</text>
+    <!-- Flowchart - Display -->
+    <path
+       d="M 27.085342,98.615228 H 160.41764 c 20.01292,7.467512 26.67766,11.201252 26.67766,18.668762 0,7.4675 -6.66474,11.20126 -26.67766,18.66875 H 27.085342 L 0.40768159,117.28399 Z"
+       id="path78"
+       style="fill:#f0f4f7;stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <text
+       x="93.751488"
+       y="121.01775"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text80"
+       style="font-style:normal;font-weight:400;font-size:13.14134979px;font-family:sans;text-anchor:middle;fill:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none">Parameter formular</text>
+    <!-- Standard - Line -->
+    <line
+       x1="93.751488"
+       y1="61.277706"
+       x2="93.751488"
+       y2="89.523537"
+       id="line82"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <polygon
+       points="4.75,9.388 5,9.513 5.25,9.388 5,9.888 "
+       id="polygon84"
+       style="fill:#000000;stroke:#000000;stroke-width:0.02645833;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(18.668763,0,0,18.668763,0.40768159,-88.072397)" />
+    <!-- Standard - Line -->
+    <line
+       x1="896.50824"
+       y1="61.277706"
+       x2="896.50824"
+       y2="89.523537"
+       id="line86"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <polygon
+       points="47.75,9.388 48,9.513 48.25,9.388 48,9.888 "
+       id="polygon88"
+       style="fill:#000000;stroke:#000000;stroke-width:0.02645833;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(18.668763,0,0,18.668763,0.40768159,-88.072397)" />
+    <!-- Flowchart - Document -->
+    <path
+       d="m 821.83319,173.29027 h 149.35013 v 49.78959 c -29.87006,-8.3076 -44.80501,-8.3076 -74.67506,0 -29.87006,8.28895 -44.80502,8.28895 -74.67507,0 z"
+       id="path90"
+       style="fill:#4682b4;stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <text
+       x="896.50824"
+       y="197.76501"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text92"
+       style="font-style:normal;font-weight:400;font-size:13.14134979px;font-family:sans;text-anchor:middle;fill:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none">Plot configuration</text>
+    <!-- Flowchart - Document -->
+    <path
+       d="m 821.83319,247.96532 h 149.35013 v 49.78959 c -29.87006,-8.3076 -44.80501,-8.3076 -74.67506,0 -29.87006,8.28893 -44.80502,8.28893 -74.67507,0 z"
+       id="path94"
+       style="fill:#4682b4;stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:connector-curvature="0" />
+    <text
+       x="896.50824"
+       y="272.44006"
+       font-size="0.80"
+       font-style="normal"
+       font-weight="400"
+       id="text96"
+       style="font-style:normal;font-weight:400;font-size:13.14134979px;font-family:sans;text-anchor:middle;fill:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none">Video configuration</text>
+    <!-- Standard - Line -->
+    <line
+       x1="915.17694"
+       y1="173.29027"
+       x2="915.17694"
+       y2="145.04446"
+       id="line98"
+       style="stroke:#000000;stroke-width:0.49394429;stroke-miterlimit:4;stroke-dasharray:none" />
+    <polygon
+       points="49.25,12.612 49,12.487 48.75,12.612 49,12.112 "
+       id="polygon100"
+       style="fill:#000000;stroke:#000000;stroke-width:0.02645833;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(18.668763,0,0,18.668763,0.40768159,-88.072397)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot916"
+       style="font-style:normal;font-weight:normal;font-size:26.60492516px;line-height:25px;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="matrix(0.49394427,0,0,0.49394427,-2.8406831,3.105839)"><flowRegion
+         id="flowRegion918"
+         style="font-size:26.60492516px"><rect
+           id="rect920"
+           width="2392.0981"
+           height="1359.6958"
+           x="-257.00229"
+           y="-496.3952"
+           style="font-size:26.60492516px" /></flowRegion><flowPara
+         id="flowPara922"></flowPara></flowRoot>  </g>
+</svg>

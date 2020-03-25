@@ -1,0 +1,27 @@
+<h2>Direct simulation Monte Carlo (DSMC)</h2>
+
+<p>The Direct Simulation Monte Carlo method[1] is used to simulate gases with low density – or to be precise: If the mean free path of the gas particles/molecules is large compared to a typical physical length of the system (high Knudsen number) the Navier-Stokes equations are no longer valid and DSMC is needed.</p>
+<p>The idea is to simulate the movement and collisions of the particles directly, but each simulated particle represents several real particles (~10³). Some further assumptions are made:</p>
+<ul>
+  <li>The particles are hard spheres.</li>
+  <li>The space is seperated into cells. A particle can collide with any other particle in the same cell independent of their positions in the cell with a probability proportional to their relative velocities and the square of their diameters.</li>
+</ul>
+
+<h3>Cells</h3>
+<p>The cells are composed of smaller elements that form a regular grid. An element is part of a cell if the center of the cell is closer to that element than any other.</p>
+
+<h3>Boundaries</h3>
+<p>Particles enter the simulation from the <i>x=0</i> surface and leave at <i>x&gt;xMax</i>. Every other surface reflects the particles.</p>
+<p>Additional boundaries can be given by functions <i>x(y,z)</i>, <i>y(z,x)</i> and <i>z(x,y)</i>. Reflections are calculated by (1) interpolating of these functions lineary to get the position of the impact, (2) calculating a numerical derivative at that position to get a normal of the surface and (3) changing the direction of the velocity of the particle.</p>
+
+<h3>Limitations/problems of this implementation</h3>
+<ul>
+  <li>Internal degrees of freedom are not simulated.</li>
+  <li>Particles may not be reflected by surfaces if they hit them very close to an edge.</li>
+  <li>The algorithm to adapt the cell centers to the particle density is very basic.</li>
+  <li>The time step is global and independent of the cell size. This requires small time steps or can cause numerical instabilities.</li>
+</ul>
+
+<hr>
+
+<p class="paper">[1] The DSMC method, GA Bird, CreateSpace Independent Publishing Platform, 2013</p>

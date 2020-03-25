@@ -1,0 +1,5 @@
+function createDrawMode (config, colorSet)
+returns [{
+    draw: function (pixels, protocol, t, offset),
+    text: config.texts[i]
+  }, ...]

@@ -1,0 +1,3 @@
+function HelpTextGenerator(iconUrl)
+
+returns a HTML String

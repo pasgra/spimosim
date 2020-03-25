@@ -1,0 +1,205 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.creator-config {
+  padding: .5em;
+}
+
+.creator-preview>* {
+  padding: .5em;
+}
+
+.creator {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.creator-config {
+  flex: 1 1 40em;
+  background-color: #CDF4FF;
+  border-right: dotted .4em darkslategrey;
+  border-top: dotted .4em darkslategrey;
+  counter-reset: configheading;
+}
+.creator-config * {  
+  font-family: monospace;
+}
+
+.creator-config h2::before {
+  content: counter(configheading) '. ';
+  counter-increment: configheading;
+}
+
+.preview-tools {
+  border-bottom: dotted .4em darkslategrey;
+  border-top: dotted .4em darkslategrey;
+  background-color: #CDF4FF;
+}
+
+.preview-error {
+  background-color: red;
+  color: white;
+  width: 100%;
+  margin: -.5em -.5em 1em -.5em;
+  padding: .5em;
+  font-family: monospace;
+  overflow-x: scroll;
+}
+
+.preview-error pre {
+  width: 0;
+  margin: 0;
+  overflow-x: visible;
+}
+
+.preview-error pre:empty {
+  display: none;
+}
+
+.spimosim-dark .preview-tools {
+  background-color: #4682B4;
+}
+
+.spimosim-dark .creator-config {
+  background-color: #4682B4;
+}
+
+.creator-intro {
+  flex-basis: 100%;
+  padding: .5em;
+}
+
+.creator-preview {
+  flex: 5 5 20em;
+}
+.config-heading {
+  text-align: center;
+}
+.preview-heading {
+  justify-content: center;
+}
+.data-flow {
+  width: 100%;
+  max-width: 975px;
+  margin: 0.5em;
+  display: block;
+}
+.no-label label {
+  display: none;
+}
+
+.code-settings {
+  box-shadow: 0 0 .5em darkslategrey;
+  background-color: white;
+}
+
+.code-settings .text-setting {
+  padding: 0;
+}
+
+.code-settings pre,
+.code-settings .text-setting {
+  margin: 0;
+}
+
+.spimosim-dark .code-settings {
+  background-color: black;
+}
+
+.spimosim-dark .creator input[type="checkbox"] + label::after {
+  border-color: white;
+}
+
+.spimosim-dark .creator input[type="checkbox"] + label::before,
+.spimosim-dark .creator input[type="radio"] + label::before {
+  border-color: white;
+}
+
+.creator-config h2 {
+  margin-top: 2em;
+}
+
+
+.preview-buttons {
+  display: flex;
+}
+
+.preview-buttons > button {
+  padding-left: 5em;
+  padding-right: 5em;
+  height: 5em;
+  flex: auto;
+}
+
+.update-preview {
+  background-image: url(../../lib/spimosimUi/icon/restart-white.svg) !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.parameter-config,
+.state-var-config {
+  margin: 0 -.5em;
+  padding: .5em;
+}
+
+.parameter-config:nth-of-type(even),
+.state-var-config:nth-of-type(even) {
+  background-image: linear-gradient(to right, #FFFFFF40, transparent);
+}
+
+.parameter-config:nth-of-type(odd),
+.state-var-config:nth-of-type(odd) {
+  background-image: linear-gradient(to right, #00000040, transparent);
+}
+
+.new-section {
+  width: 100%;
+}
+
+.empty-downloads,
+.main > .hidden-main-info {
+  display: unset;
+  opacity: .4;
+}
+
+.empty-downloads::before,
+.main > .hidden-main-info::before {
+  content: '– only shown in preview (will be hidden in final version) – ';
+  display: block;
+  font-style: italic;
+  text-align: center;
+  height: 0;
+  overflow: visible;
+}
+
+.remove-section {
+  float: right;
+}
+
+.checkbox-line {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buffer-config .number-setting,
+.buffer-config .select-setting {
+  display: inline;
+}
+.buffer-config .number-setting {
+  padding: 0;
+}
+.buffer-config .select-setting select {
+  margin-bottom: 1em;
+}
+.buffer-config .number-setting input,
+.buffer-config .select-setting select {
+  width: auto;
+}
+
+.buffer-config .number-setting label,
+.buffer-config .select-setting label {
+  display: none;
+}

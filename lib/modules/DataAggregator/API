@@ -1,0 +1,12 @@
+function DataAggregator(plotter, settings)
+DataAggregator.prototype.fittable = boolean;
+DataAggregator.prototype.getTMin = function ()
+DataAggregator.prototype.getTMaxCalculated = function ()
+DataAggregator.prototype.setInterval = function (interval)
+DataAggregator.prototype.isExpectingData = function ()
+DataAggregator.prototype.deleteOldData = function (tMin)
+DataAggregator.prototype.getData = function (from, to)
+DataAggregator.prototype.getDataY = function (tStart, tEnd)
+DataAggregator.prototype.initBackend = function ()
+DataAggregator.prototype.getCsv = function (from, to)
+DataAggregator.prototype.setAutoUpdate = function (doAutoUpdate)

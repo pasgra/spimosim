@@ -1,0 +1,12 @@
+function ProtocolVar(tMin)
+ProtocolVar.prototype.get = function (t)
+ProtocolVar.prototype.getAsJsonString = function (t)
+ProtocolVar.prototype.set = function(t, val)
+ProtocolVar.prototype.join = function(protocolVar)
+ProtocolVar.prototype.parsedJson2Value = function (obj)
+ProtocolVar.prototype.getBytesPerStep = function ()
+ProtocolVar.prototype.deleteOldData = function (t)
+ProtocolVar.prototype.makeTransferable = function ()
+
+ObjectProtocolVar.prototype.slice = function (tMin, tMax)
+ObjectProtocolVar.prototype.setAll = function(t, vals)
