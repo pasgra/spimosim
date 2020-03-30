@@ -1,0 +1,7 @@
+function PlotComputer(consts)
+PlotComputer.prototype.getTransfers = function ()
+function TimePlotComputer(consts)
+TimePlotComputer.prototype.calcDataInterval = function (vars, tStart, tEnd)
+TimePlotComputer.prototype.getYValue = function (t, vars)
+function MultiSeriesTimePlotComputer(consts, n)
+TimePlotComputer.prototype.getYValues = function (t, vars)

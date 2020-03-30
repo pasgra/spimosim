@@ -254,7 +254,7 @@ input[type="range"] {
 
 .description-under-plot {
   padding: 1rem .4rem;
-  height: 5rem;
+  min-height: 3rem;
   display: block;
   overflow-y: auto;
 }
@@ -677,10 +677,14 @@ input[type="range"] {
   float: right;
 }
 
-.info *:not(.section-drag-bar) {
-  max-width: 40rem;
+.info>*:not(.section-drag-bar) {
   line-height: 2;
   text-align: justify;
+}
+
+.info>*:not(.section-drag-bar)>*:not(.info-content),
+.info-content>* {
+  max-width: 50rem;
 }
 
 .help li {
@@ -744,6 +748,7 @@ input[type="range"] {
 }
 
 .settings .text-setting,
+.settings .jscode-setting,
 .settings .string-setting,
 .settings .select-setting,
 .settings .number-setting,
@@ -753,6 +758,7 @@ input[type="range"] {
 }
 
 .settings .text-setting,
+.settings .jscode-setting,
 .settings .string-setting,
 .settings .radio-setting,
 .settings .select-setting,
@@ -762,6 +768,7 @@ input[type="range"] {
 }
 
 .settings .text-setting label,
+.settings .jscode-setting label,
 .settings .string-setting label,
 .settings .select-setting label,
 .settings .number-setting label,
@@ -779,6 +786,7 @@ input[type="range"] {
 }
 
 .settings .text-setting textarea,
+.settings .jscode-setting .CodeMirror,
 .settings .string-setting input,
 .settings .select-setting select,
 .settings .number-setting input,
@@ -1187,7 +1195,7 @@ input[type="range"] {
 }
 
 .plot-box {
-  flex-basis: 30rem;
+  flex-basis: 18rem;
   flex-grow: 1;
   max-width: 100%;
   background-color: white;
@@ -1229,7 +1237,7 @@ input[type="range"] {
 
 .plot-div {
   height: 40vh;
-  max-height: 15rem;
+  max-height: 18rem;
 }
 
 .fullscreen-plot {

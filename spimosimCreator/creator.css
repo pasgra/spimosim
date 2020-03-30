@@ -1,6 +1,15 @@
 body {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+footer {
+  flex: 0;
 }
 
 .creator-config {
@@ -13,15 +22,25 @@ body {
 
 .creator {
   display: flex;
+  overflow: auto;
+  flex: 1;
   flex-wrap: wrap;
+  scroll-snap-type: y proximity;
 }
 
 .creator-config {
   flex: 1 1 40em;
   background-color: #CDF4FF;
-  border-right: dotted .4em darkslategrey;
-  border-top: dotted .4em darkslategrey;
+  border: dotted .4rem darkslategrey;
+  border-left: 0rem;
   counter-reset: configheading;
+  height: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-align: start;
 }
 .creator-config * {  
   font-family: monospace;
@@ -69,11 +88,22 @@ body {
 .creator-intro {
   flex-basis: 100%;
   padding: .5em;
+  scroll-snap-align: start;
 }
 
 .creator-preview {
-  flex: 5 5 20em;
+  flex: 4 4 20em;
+  scroll-snap-align: end;
+  border-bottom: dotted .4rem darkslategrey;
+  background-color: #e9ecee;
+  z-index: 2;
 }
+
+.spimosim-dark .creator-preview {
+  border-bottom-color: #E0E5F1;
+  background-color: #2A2C33;
+}
+
 .config-heading {
   text-align: center;
 }
