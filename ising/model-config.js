@@ -24,7 +24,7 @@ var stateVariables = {
 // A minimal version of the Ising model just needs the state variable σ.
 // Uncomment the following section the enhance the application by defining
 // the magnetisation as a state variable.
-/*
+  /*
   magnetisation: {
 
     type: 'Float64',          // A 64 bit floating point number.
@@ -38,7 +38,7 @@ var stateVariables = {
       optionText: 'Magnetisation (mean spin orientation)'
     }
   }
-*/
+  */
 
 };
 
@@ -126,6 +126,9 @@ var PAGE_TO_ROOT              = location.pathname
 var LIB_SPIMOSIM_CORE_TO_ROOT = 'lib/spimosimCore/';
 var ROOT_TO_LIB_SPIMOSIM_CORE = '../../';
 
+var MODULES_TO_ROOT = 'lib/modules/';
+var ROOT_TO_MODULES = '../../';
+
 var LIB_SPIMOSIM_UI_TO_ROOT   = 'lib/spimosimUi/';
 var ROOT_TO_LIB_SPIMOSIM_UI   = '../../';
 
@@ -207,7 +210,7 @@ var modelConfig = {
       'changeEndlessMode', 'deleteOldSteps', 'checkboxStartAutomatically'
     ],                        // 
     
-    updateAlgorithms: {       // An list of algorithms.
+    updateAlgorithms: {       // A list of algorithms.
 
       'random-serial-update': 'Random serial update',
                               // The syntax is:
@@ -231,17 +234,20 @@ var modelConfig = {
                               // javascript and the simulation runs in a
                               // webworker
       
-      workerUrl: ROOT_TO_PAGE + LIB_SPIMOSIM_CORE_TO_ROOT +
-        'spimosimCore.simulation.worker.js',
+      workerUrl: ROOT_TO_PAGE + MODULES_TO_ROOT +
+        'SimulationBackend/webworker.worker.js',
                               // The webworker script used in the backend
 
       urls: [
-        ROOT_TO_LIB_SPIMOSIM_CORE + LIB_SPIMOSIM_NETWORK_TO_ROOT + 'networkCore.js',
+        "../" + ROOT_TO_MODULES + LIB_SPIMOSIM_NETWORK_TO_ROOT + 'networkCore.js',
                               // A javascript file containing the library
                               // spimosimNetwork (relative to webworker)
-        ROOT_TO_LIB_SPIMOSIM_CORE + LIB_SPIMOSIM_NETWORK_TO_ROOT + 'network-config.js',
+        "../" + ROOT_TO_MODULES + MODULES_TO_ROOT + 'Network/2d-lattice.js',
+        "../" + ROOT_TO_MODULES + MODULES_TO_ROOT + 'Network/quadratic.js',
+        "../" + ROOT_TO_MODULES + MODULES_TO_ROOT + 'ProtocolVar/typed.js',
+        "../" + ROOT_TO_MODULES + MODULES_TO_ROOT + 'ProtocolVar/typed-array.js',
                               // A javascript file defining network types
-        ROOT_TO_LIB_SPIMOSIM_CORE + PAGE_TO_ROOT + 'model.js'
+        "../" + ROOT_TO_MODULES + PAGE_TO_ROOT + 'model.js'
                               // A javascript file containing the code of
                               // the model (relative to webworker)
       ],
@@ -277,10 +283,14 @@ var modelConfig = {
 
     backend: {
       type: 'webworker',
-      workerUrl: ROOT_TO_PAGE + LIB_SPIMOSIM_CORE_TO_ROOT +
-        'spimosimCore.plot.worker.js',
+      workerUrl: ROOT_TO_PAGE + MODULES_TO_ROOT +
+        'PlotBackend/webworker.worker.js',
       urls: [
-        ROOT_TO_LIB_SPIMOSIM_CORE + PAGE_TO_ROOT + 'plots/plot-computers.js'
+        "../" + ROOT_TO_LIB_SPIMOSIM_CORE + MODULES_TO_ROOT + 'PlotComputer/mean-value.js',
+        "../" + ROOT_TO_LIB_SPIMOSIM_CORE + MODULES_TO_ROOT + 'PlotComputer/auto-correlation.js',
+        "../" + ROOT_TO_LIB_SPIMOSIM_CORE + MODULES_TO_ROOT + 'PlotComputer/distribution.js',
+        "../" + ROOT_TO_LIB_SPIMOSIM_CORE + MODULES_TO_ROOT + 'PlotComputer/cumulated.js',
+        "../" + ROOT_TO_LIB_SPIMOSIM_CORE + PAGE_TO_ROOT + 'plots/plot-computers.js'
       ]
     },
     
@@ -295,13 +305,13 @@ var modelConfig = {
     ],
     
     defaultPlots: [           // Plots that are created by default
-      /*
+      
       {
         type: 'magnetisation',// The magnetisation plot
         settings: {}          // If this plot had settings those could be
                               // defined here
       },
-      */
+      
     ]
   },
 

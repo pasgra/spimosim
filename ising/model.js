@@ -106,10 +106,12 @@ IsingModel.prototype.step = function () { // n times updates a random spins
   }
     
   // Uncomment to calculate the magnetisation
-/*this.magnetisation = 0;
+  /*
+  this.magnetisation = 0;
   for (var i = 0; i < this.n; i++) {
     this.magnetisation += this.sigma[i] / this.n;
-  }*/
+  }
+  */
 };
 
 /*
