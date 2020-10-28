@@ -566,6 +566,33 @@ input[type="range"] {
   margin-top: .5rem;
 }
 
+.prev-model::after,
+.next-model::before {
+  position: relative;
+  display: block;
+  font-size: 1rem;
+  white-space: nowrap;
+  width: 8rem;
+  opacity: 0.4;
+}
+
+.prev-model:hover::after,
+.next-model:hover::before {
+  opacity: 0.7;
+}
+
+.next-model::before {
+  content: 'next model';
+  text-align: right;
+  margin-left: -8rem;
+}
+
+.prev-model::after {
+  content: 'previous model';
+  text-align: right;
+  margin-right: -8rem;
+}
+
 .prev-model, .next-model {
   min-width: 1.2rem;
   height: 2.4rem;
