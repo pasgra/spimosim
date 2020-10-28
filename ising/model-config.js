@@ -244,6 +244,7 @@ var modelConfig = {
                               // spimosimNetwork (relative to webworker)
         "../" + ROOT_TO_MODULES + MODULES_TO_ROOT + 'Network/2d-lattice.js',
         "../" + ROOT_TO_MODULES + MODULES_TO_ROOT + 'Network/quadratic.js',
+        "../" + ROOT_TO_MODULES + MODULES_TO_ROOT + 'Network/spimosim.js',
         "../" + ROOT_TO_MODULES + MODULES_TO_ROOT + 'ProtocolVar/typed.js',
         "../" + ROOT_TO_MODULES + MODULES_TO_ROOT + 'ProtocolVar/typed-array.js',
                               // A javascript file defining network types
