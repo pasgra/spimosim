@@ -52,6 +52,115 @@
     </div>
   </footer>
   <script src="../ext_lib/lib/modernizr/modernizr-custom.js"></script>
+
+  <script>
+var isingModelHash = "#2d-lattice=true&" +
+  "beta=0.442&" +
+  "changeSettingsFunction=%2F%2F%20Generate%20adjacency%20lists%20but%20only%20if%20necessary%20(no%20reuse%20from%20last%0A%2F%2F%20simulation%20possible)%0Aif%20(%0A%20%20%2F%2F%20no%20adjacency%20lists%20saved%20-or-%0A%20%20this.adjacencyLists%20%3D%3D%3D%20undefined%20%7C%7C%20%0A%20%20%2F%2F%20different%20network%20settings%20than%20before%0A%20%20!settings.network.settingsUnchanged%0A)%20%7B%0A%0A%20%20%2F%2F%20Generate%20adjacency%20lists%0A%20%20this.adjacencyLists%20%3D%20spimosimNetwork.networkRegister.generateAdjacencyLists(settings.network)%3B" +
+    "%0A%0A%20%20%2F%2F%20Number%20of%20nodes%0A%20%20this.n%20%3D%20this.adjacencyLists.length%3B" +
+    "%0A%0A%7D%0A%0A%2F%2F%20Save%20settings%0Athis.j%20%3D%20settings.parameters.j%3B" +
+    "%0Athis.beta%20%3D%20settings.parameters.beta%3B" +
+    "%0A%0A%2F%2F%20Recreate%20sigma%20on%20restart%0Aif%20(restart)%20%7B%0A%20%20%2F%2F%20The%20state%20of%20every%20agent%0A%20%20this.sigma%20%3D%20new%20Int8Array(this.n)%3B" +
+    "%0A%20%20%2F%2F%20Initialize%20randomly%0A%20%20for%20(var%20i%20%3D%200%3B" +
+    "%20i%20%3C%20this.n%3B" +
+    "%20i%2B%2B)%20%7B%0A%20%20%20%20if%20(Math.random()%20%3C%20.5)%20%7B%0A%20%20%20%20%20%20this.sigma%5Bi%5D%20%3D%201%3B" +
+    "%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20this.sigma%5Bi%5D%20%3D%20-1%3B" +
+    "%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A%0A%2F%2F%20Uncomment%20to%20calculate%20the%20magnetisation%0A%2F*this.magnetisation%20%3D%200%3B" +
+    "%0A%20%20for%20(var%20i%20%3D%200%3B" +
+    "%20i%20%3C%20this.n%3B" +
+    "%20i%2B%2B)%20%7B%0A%20%20%20%20this.magnetisation%20%2B%3D%20this.sigma%5Bi%5D%20%2F%20this.n%3B" +
+    "%0A%20%20%7D*%2F%0A%0A%2F%2Fconsole.log(settings)%3B" +
+    "%20%2F%2F%20Log%20settings%20to%20web%20console%0A&" +
+  "colorSet=%7B%0AUP%3A%5B'%23AA2222'%5D%2C%0ADOWN%3A%5B'%2322AA22'%5D%0A%7D&" +
+  "createDrawModes=spins%20and%20flips&" +
+  "description=%3Ch2%3EAbout%20the%20model%3C%2Fh2%3E%0A%3Cp%3EYou%20probably%20know%20the%20Ising%20Model.%3C%2Fp%3E%0A%3Cp%3EHere%20the%20original%20(German)%20paper%3A%3C%2Fp%3E%0A%3Cp%20class%3D%22paper%22%3EErnst%20Ising.%20%E2%80%9EBeitrag%20zur%20Theorie%20des%20Ferromagnetismus%E2%80%9C.%20In%3A%20Zeitschrift%20f%C3%BCr%20Physik%0A31.1%20(1925)%2C%20S.%20253%E2%80%93258.%20issn%3A%200044-3328.%3C%2Fp%3E&" +
+  "enableNetworkLib=true&" +
+  "labelTextP0=inverse%20Temperature%20%CE%B2&" +
+  "labelTextP1=coupling%20j&" +
+  "maxP0=10&" +
+  "maxP1=10&" +
+  "maxValues=1&" +
+  "minP0=0&" +
+  "minP1=-10&" +
+  "minValues=-1&" +
+  "modelCode='use%20strict'%3B" +
+    "%0A%0Afunction%20Model(settings)%20%7B%0A%20%20this.changeSettings(settings%2C%20true)%3B" +
+    "%0A%7D%3B" +
+    "%0A%0AModel.prototype.changeSettings%20%3D%20function%20(settings%2C%20restart)%20%7B%0A%2F%2F%20Generate%20adjacency%20lists%20but%20only%20if%20necessary%20(no%20reuse%20from%20last%0A%2F%2F%20simulation%20possible)%0Aif%20(%0A%20%20%2F%2F%20no%20adjacency%20lists%20saved%20-or-%0A%20%20this.adjacencyLists%20%3D%3D%3D%20undefined%20%7C%7C%20%0A%20%20%2F%2F%20different%20network%20settings%20than%20before%0A%20%20!settings.network.settingsUnchanged%0A)%20%7B%0A%0A%20%20%2F%2F%20Generate%20adjacency%20lists%0A%20%20this.adjacencyLists%20%3D%20spimosimNetwork.networkRegister.generateAdjacencyLists(settings.network)%3B" +
+    "%0A%0A%20%20%2F%2F%20Number%20of%20nodes%0A%20%20this.n%20%3D%20this.adjacencyLists.length%3B" +
+    "%0A%0A%7D%0A%0A%2F%2F%20Save%20settings%0Athis.j%20%3D%20settings.parameters.j%3B" +
+    "%0Athis.beta%20%3D%20settings.parameters.beta%3B" +
+    "%0A%0A%2F%2F%20Recreate%20sigma%20on%20restart%0Aif%20(restart)%20%7B%0A%20%20%2F%2F%20The%20state%20of%20every%20agent%0A%20%20this.sigma%20%3D%20new%20Int8Array(this.n)%3B" +
+    "%0A%20%20%2F%2F%20Initialize%20randomly%0A%20%20for%20(var%20i%20%3D%200%3B" +
+    "%20i%20%3C%20this.n%3B" +
+    "%20i%2B%2B)%20%7B%0A%20%20%20%20if%20(Math.random()%20%3C%20.5)%20%7B%0A%20%20%20%20%20%20this.sigma%5Bi%5D%20%3D%201%3B" +
+    "%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20this.sigma%5Bi%5D%20%3D%20-1%3B" +
+    "%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A%0A%2F%2F%20Uncomment%20to%20calculate%20the%20magnetisation%0A%2F*this.magnetisation%20%3D%200%3B" +
+    "%0A%20%20for%20(var%20i%20%3D%200%3B" +
+    "%20i%20%3C%20this.n%3B" +
+    "%20i%2B%2B)%20%7B%0A%20%20%20%20this.magnetisation%20%2B%3D%20this.sigma%5Bi%5D%20%2F%20this.n%3B" +
+    "%0A%20%20%7D*%2F%0A%0A%2F%2Fconsole.log(settings)%3B" +
+    "%20%2F%2F%20Log%20settings%20to%20web%20console%0A%0A%7D%3B" +
+    "%0A%0AModel.prototype.step%20%3D%20function%20(varsToSave%2C%20time)%20%7B%0Afor%20(var%20k%20%3D%200%3B" +
+    "%20k%20%3C%20this.n%3B" +
+    "%20k%2B%2B)%20%7B%0A%20%20var%20i%20%3D%20Math.floor(this.n%20*%20Math.random())%3B" +
+    "%20%2F%2F%20A%20random%20agent%0A%0A%20%20%2F%2F%20sum%20up%20neighbor%20spins%0A%20%20var%20neighbors%20%3D%20this.adjacencyLists%5Bi%5D%3B" +
+    "%20%2F%2F%20The%20neighbors%20of%20i%0A%20%20var%20sum%20%3D%200%3B" +
+    "%0A%20%20for%20(var%20j%20%3D%200%3B" +
+    "%20j%20%3C%20neighbors.length%3B" +
+    "%20j%2B%2B)%20%7B%0A%20%20%20%20sum%20%2B%3D%20this.sigma%5Bneighbors%5Bj%5D%5D%3B" +
+    "%0A%20%20%7D%0A%0A%20%20var%20energy%20%3D%20this.j%20*%20sum%3B" +
+    "%20%2F%2F%20Energy%20of%20all%20connections%20to%20spin%20i%0A%0A%20%20%2F%2F%20New%20value%20via%20heat%20bath%20algorithm%0A%20%20var%20probability%20%3D%201%20%2F%20(1%20%2B%20Math.exp(-2%20*%20this.beta%20*%20energy))%3B" +
+    "%0A%20%20if%20(Math.random()%20%3C%20probability)%20%7B%0A%20%20%20%20this.sigma%5Bi%5D%20%3D%201%3B" +
+    "%0A%20%20%7D%20else%20%7B%0A%20%20%20%20this.sigma%5Bi%5D%20%3D%20-1%3B" +
+    "%0A%20%20%7D%0A%7D%0A%0A%2F%2F%20Uncomment%20to%20calculate%20the%20magnetisation%0A%2F*%0A%20%20this.magnetisation%20%3D%200%3B" +
+    "%0A%20%20for%20(var%20i%20%3D%200%3B" +
+    "%20i%20%3C%20this.n%3B" +
+    "%20i%2B%2B)%20%7B%0A%20%20%20%20this.magnetisation%20%2B%3D%20this.sigma%5Bi%5D%20%2F%20this.n%3B" +
+    "%0A%20%20%7D%0A%20%20*%2F%0A%0A%7D%3B" +
+    "%0A%0AspimosimCore.modules.add('Model'%2C%20'Ising'%2C%20Model)%3B" +
+    "%0A&" +
+  "modelObjectName=Model&" +
+  "network-type=quadratic&" +
+  "numberOfParameters=2&" +
+  "numberOfStateVars=1&" +
+  "quadratic=true&" +
+  "rowsP0=3&" +
+  "rowsP1=3&" +
+  "simulationBackendType=webworker&" +
+  "spimosim=true&" +
+  "stepFunction=for%20(var%20k%20%3D%200%3B" +
+    "%20k%20%3C%20this.n%3B" +
+    "%20k%2B%2B)%20%7B%0A%20%20var%20i%20%3D%20Math.floor(this.n%20*%20Math.random())%3B" +
+    "%20%2F%2F%20A%20random%20agent%0A%0A%20%20%2F%2F%20sum%20up%20neighbor%20spins%0A%20%20var%20neighbors%20%3D%20this.adjacencyLists%5Bi%5D%3B" +
+    "%20%2F%2F%20The%20neighbors%20of%20i%0A%20%20var%20sum%20%3D%200%3B" +
+    "%0A%20%20for%20(var%20j%20%3D%200%3B" +
+    "%20j%20%3C%20neighbors.length%3B" +
+    "%20j%2B%2B)%20%7B%0A%20%20%20%20sum%20%2B%3D%20this.sigma%5Bneighbors%5Bj%5D%5D%3B" +
+    "%0A%20%20%7D%0A%0A%20%20var%20energy%20%3D%20this.j%20*%20sum%3B" +
+    "%20%2F%2F%20Energy%20of%20all%20connections%20to%20spin%20i%0A%0A%20%20%2F%2F%20New%20value%20via%20heat%20bath%20algorithm%0A%20%20var%20probability%20%3D%201%20%2F%20(1%20%2B%20Math.exp(-2%20*%20this.beta%20*%20energy))%3B" +
+    "%0A%20%20if%20(Math.random()%20%3C%20probability)%20%7B%0A%20%20%20%20this.sigma%5Bi%5D%20%3D%201%3B" +
+    "%0A%20%20%7D%20else%20%7B%0A%20%20%20%20this.sigma%5Bi%5D%20%3D%20-1%3B" +
+    "%0A%20%20%7D%0A%7D%0A%0A%2F%2F%20Uncomment%20to%20calculate%20the%20magnetisation%0A%2F*%0A%20%20this.magnetisation%20%3D%200%3B" +
+    "%0A%20%20for%20(var%20i%20%3D%200%3B" +
+    "%20i%20%3C%20this.n%3B" +
+    "%20i%2B%2B)%20%7B%0A%20%20%20%20this.magnetisation%20%2B%3D%20this.sigma%5Bi%5D%20%2F%20this.n%3B" +
+    "%0A%20%20%7D%0A%20%20*%2F%0A&" +
+  "stepP0=0.001&" +
+  "stepP1=0.01&" +
+  "title=Ising&" +
+  "typeSV0=SpinArray&" +
+  "valueP0=0.442&" +
+  "valueP1=1&" +
+  "varNameP0=beta&" +
+  "varNameP1=j&" +
+  "varNameSV0=sigma&" +
+  "varNames=sigma";
+if (location.hash.length <= 1 &&
+    confirm("Do you want to load the Ising model to get started?")) {
+  location.hash = isingModelHash;
+}
+  </script>
   
   <script src="../lib/spimosimCore/polyfill.js"></script>
   <script src="../lib/spimosimCore/tools.js"></script>
