@@ -5,9 +5,9 @@ function DSMCModel(settings) {
 };
 
 DSMCModel.prototype.changeSettings = function (settings, restart) {
-  var n = settings.n;
+  var n = settings.parameters.n;
 
-  if (!this.settings || this.settings.n !== n) {
+  if (!this.settings || this.settings.parameters.n !== n) {
     this.x = new Float64Array(n);
     this.y = new Float64Array(n);
     this.z = new Float64Array(n);
@@ -18,41 +18,41 @@ DSMCModel.prototype.changeSettings = function (settings, restart) {
     this.cell = new Float64Array(n);
     this.status = new Float64Array(n);
     for (var i = 0; i < n; i++) {
-      this.x[i] = Math.random() * settings.dt;
-      this.y[i] = Math.random() * settings.yMax;
-      this.z[i] = Math.random() * settings.zMax;
+      this.x[i] = Math.random() * settings.parameters.dt;
+      this.y[i] = Math.random() * settings.parameters.yMax;
+      this.z[i] = Math.random() * settings.parameters.zMax;
       
       this.vx[i] = .2 * (Math.random() + .5);
       this.vy[i] = .2 * (Math.random() - .5);
       this.vz[i] = .2 * (Math.random() - .5);
     }
   } else {
-    if (this.settings.xMax > settings.xMax) {
+    if (this.settings.parameters.xMax > settings.parameters.xMax) {
       for (var i = 0; i < n; i++) {
-        this.x[i] = Math.min(this.x[i], settings.xMax - 1e-12);
+        this.x[i] = Math.min(this.x[i], settings.parameters.xMax - 1e-12);
       }
     }
-    if (this.settings.yMax > settings.yMax) {
+    if (this.settings.parameters.yMax > settings.parameters.yMax) {
       for (var i = 0; i < n; i++) {
-        this.y[i] = Math.min(this.y[i], settings.yMax - 1e-12);
+        this.y[i] = Math.min(this.y[i], settings.parameters.yMax - 1e-12);
       }
     }
-    if (this.settings.zMax > settings.zMax) {
+    if (this.settings.parameters.zMax > settings.parameters.zMax) {
       for (var i = 0; i < n; i++) {
-        this.z[i] = Math.min(this.z[i], settings.zMax - 1e-12);
+        this.z[i] = Math.min(this.z[i], settings.parameters.zMax - 1e-12);
       }
     }
   }
     
-  var L = Math.pow(settings.xMax * settings.yMax * settings.zMax * settings.mpc / n, 1/3); // wanted cell length
-  this.nx = 10 * Math.max(1, Math.floor(settings.xMax / L));
-  this.ny = 10 * Math.max(1, Math.floor(settings.yMax / L));
-  this.nz = 10 * Math.max(1, Math.floor(settings.zMax / L));
-  this.Lx = settings.xMax / this.nx;
-  this.Ly = settings.yMax / this.ny;
-  this.Lz = settings.zMax / this.nz;
+  var L = Math.pow(settings.parameters.xMax * settings.parameters.yMax * settings.parameters.zMax * settings.parameters.mpc / n, 1/3); // wanted cell length
+  this.nx = 10 * Math.max(1, Math.floor(settings.parameters.xMax / L));
+  this.ny = 10 * Math.max(1, Math.floor(settings.parameters.yMax / L));
+  this.nz = 10 * Math.max(1, Math.floor(settings.parameters.zMax / L));
+  this.Lx = settings.parameters.xMax / this.nx;
+  this.Ly = settings.parameters.yMax / this.ny;
+  this.Lz = settings.parameters.zMax / this.nz;
   var numElements = this.nx * this.ny * this.nz;
-  var numCenters = Math.ceil(n / settings.mpc);
+  var numCenters = Math.ceil(n / settings.parameters.mpc);
 
   this.elementToCell = new Uint32Array(numElements);
   this.cellCentersX = new Float32Array(numCenters);
@@ -152,7 +152,7 @@ DSMCModel.prototype.calcElementToCell = function () {
 
 DSMCModel.prototype.moveCellCenters = function () {
   var numCells = this.cellCentersX.length;
-  var n = this.settings.n;
+  var n = this.settings.parameters.n;
   var particlesPerCell = n / numCells;
   
   var selected = new Uint8Array(n);
@@ -176,9 +176,9 @@ DSMCModel.prototype.moveCellCentersWithForce = function () {
   var forceY = new Float32Array(numCells);
   var forceZ = new Float32Array(numCells);
   var x, y, z, dx, dy, dz, dFx, dFy, dFz;
-  var xMax = this.settings.xMax;
-  var yMax = this.settings.yMax;
-  var zMax = this.settings.zMax;
+  var xMax = this.settings.parameters.xMax;
+  var yMax = this.settings.parameters.yMax;
+  var zMax = this.settings.parameters.zMax;
   
   for (var i = 0; i < numCells; i++) {
     var particlesInCell = this.cellContent[i].length + 10;
@@ -249,7 +249,7 @@ function createFunctions(parameters, parameterName, varName1, varName2) {
 
 //http://homepage.univie.ac.at/franz.vesely/cp_tut/nol2h/new/c8hd_s4dsm.html
 DSMCModel.prototype.step = function (varsToSave, t) { // n times updates a random spins
-  if (this.settings.adaptCellCenterPositions && t % this.settings.cellCenterMoveInterval === 0) {
+  if (this.settings.parameters.adaptCellCenterPositions && t % this.settings.parameters.cellCenterMoveInterval === 0) {
     this.moveCellCentersWithForce();
   }
   
@@ -258,28 +258,28 @@ DSMCModel.prototype.step = function (varsToSave, t) { // n times updates a rando
   collisions += this.collide();
 
   var vSum = 0;
-  for (var i = 0, n = this.settings.n; i < n; i++) {
+  for (var i = 0, n = this.settings.parameters.n; i < n; i++) {
     vSum += Math.sqrt(this.vx[i] * this.vx[i] + this.vy[i] * this.vy[i] + this.vz[i] * this.vz[i]);
   }
 
-  this.vMean = vSum / this.settings.n;
+  this.vMean = vSum / this.settings.parameters.n;
 
   if (collisions > 0) {
-    this.meanFreePath = vSum * this.settings.dt / collisions;
+    this.meanFreePath = vSum * this.settings.parameters.dt / collisions;
     this.lastCollision = t;
   } else {
-    this.meanFreePath = (t - this.lastCollision) * vSum * this.settings.dt;
+    this.meanFreePath = (t - this.lastCollision) * vSum * this.settings.parameters.dt;
   }
 };
 
 DSMCModel.prototype.move = function () { // n times updates a random spins
-  var dt = this.settings.dt;
+  var dt = this.settings.parameters.dt;
   var nx = this.nx, ny = this.ny, nz = this.nz;
   var Lx = this.Lx, Ly = this.Ly, Lz = this.Lz;
-  var xMax = this.settings.xMax;
-  var yMax = this.settings.yMax;
-  var zMax = this.settings.zMax;
-  var n = this.settings.n;
+  var xMax = this.settings.parameters.xMax;
+  var yMax = this.settings.parameters.yMax;
+  var zMax = this.settings.parameters.zMax;
+  var n = this.settings.parameters.n;
   var x1, y1, z1, x2, y2, z2, vx1, vy1, vz1, cell;
   this.cellContent = [];
   for (var i = 0, len = this.cellCentersX.length; i < len; i++) {
@@ -417,14 +417,14 @@ function applyBoundary(f, x1, x2, y1, y2, z1, z2, vx1, vy1, vz1) {
 }
 
 DSMCModel.prototype.collide = function () { // n times updates a random spins
-  var dt = this.settings.dt;
+  var dt = this.settings.parameters.dt;
   var nx = this.nx, ny = this.ny, nz = this.nz;
   var Lx = this.Lx, Ly = this.Ly, Lz = this.Lz;
   var vMax = 2 * Math.max.apply(null, this.vx);
   var a, b, ia, ib;
   var dv, dvx, dvy, dvz;
   var r, r2, rx, ry, rz;
-  var c = Math.PI * this.settings.d * this.settings.d * vMax * dt / (2 * Lx * Ly * Lz);
+  var c = Math.PI * this.settings.parameters.d * this.settings.parameters.d * vMax * dt / (2 * Lx * Ly * Lz);
   
   var collisions = 0;
   
