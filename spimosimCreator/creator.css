@@ -164,7 +164,7 @@ footer {
 }
 
 .update-preview {
-  background-image: url(../../lib/spimosimUi/icon/restart-white.svg) !important;
+  background-image: url(../lib/spimosimUi/icon/restart-white.svg) !important;
   background-size: contain;
   background-repeat: no-repeat;
 }
