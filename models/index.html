@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../ext_lib/lib/dygraph/dygraph.css" />
+  <link rel="stylesheet" href="../ext_lib/css/radio-checkbox.css" />
+  <link rel="stylesheet" href="../ext_lib/css/sliders.css" />
+  <link rel="stylesheet" href="../lib/spimosimUi/css/spimosim.css" />
+  <link rel="stylesheet" href="../lib/spimosimUi/css/spimosim-dark.css" />
+
+  <link rel="icon" href="../lib/spimosimUi/icon/favicon.svg" />
+
+  <title>Spin Model Simulation</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="spimosim-dark has-header-image">
+  <h1 id="heading0" class="model-heading"></h1>
+
+  <div class="main">
+    <section id="info0">
+    </section>
+    <section id="help0">
+    </section>
+    <section id="controls0">
+    </section>
+    <section id="video0">
+    </section>
+    <section id="plotter0">
+    </section>
+    <section id="downloads0">
+    </section>
+  </div>
+  <footer>
+    <div>
+      <div class="used-libs">
+        Used libraries:
+        <ul>
+          <li class="used-lib"><a href="http://spimosim.pascalgrafe.net">spimosim</a><a class="lib-license" href="http://spimosim.pascalgrafe.net/LICENSE.md">(License)</a></li>,
+          <li class="used-lib"><a href="https://modernizr.com/">Modernizr</a><a class="lib-license" href="../ext_lib/lib/modernizr/modernizr-custom.js">(License)</a></li>,
+          <li class="used-lib"><a href="http://dygraphs.com/">Dygraph</a><a class="lib-license" href="../ext_lib/lib/dygraph/dygraph-2.0.0.min.js">(License)</a></li>,
+          <li class="used-lib"><a href="https://jnordberg.github.io/gif.js/">gif.js</a><a class="lib-license" href="../ext_lib/lib/gif.js/LICENSE">(License)</a></li>,
+          <li class="used-lib"><a href="http://visjs.org/">vis.js</a><a class="lib-license" href="../ext_lib/lib/vis.js/vis-network.min.js">(License)</a></li>,
+          <li class="used-lib"><a href="http://www.numericjs.com/">numeric.js</a><a class="lib-license" href="../ext_lib/lib/numeric/license.txt">(License)</a></li>
+        </ul>
+      </div>
+      <div class="author">
+        Powered by 
+        <a href="http://spimosim.pascalgrafe.net">SpiMoSim</a> by Pascal Grafe
+      </div>
+    </div>
+  </footer>
+  <script src="../ext_lib/lib/modernizr/modernizr-custom.js"></script>
+  <script src="../ext_lib/lib/dygraph/dygraph-2.0.0.min.js"></script>
+  <script src="../ext_lib/lib/gif.js/gif.js"></script>
+  <script src="../ext_lib/lib/numeric/numeric-1.2.8-2.min.js"></script>
+  <script src="../ext_lib/lib/vis.js/vis-network.min.js"></script>
+
+  <script src="../lib/spimosimCore/polyfill.js"></script>
+  <script src="../lib/spimosimCore/tools.js"></script>
+  <script src="../lib/spimosimCore/spimosimCore.js"></script>
+  <script src="../lib/modules/ProtocolVar/typed.js"></script>
+  <script src="../lib/modules/ProtocolVar/typed-array.js"></script>
+  <script src="../lib/modules/ProtocolVar/spin-array.js"></script>
+  
+  <script src="../lib/spimosimUi/polyfill.js"></script>
+  <script src="../lib/spimosimUi/graphic-tools.js"></script>
+  <script src="../lib/spimosimUi/spimosimUi.js"></script>
+
+  <script src="../lib/modules/Video/1d-lattice.js"></script>
+  <script src="../lib/modules/Video/2d-lattice.js"></script>
+  <script src="../lib/modules/Video/nd-lattice.js"></script>
+  <script src="../lib/modules/Video/webgl-video.js"></script>
+  <script src="../lib/modules/Video/network.js"></script>
+  <script src="../lib/modules/SimulationBackend/webworker.js"></script>
+  <script src="../lib/modules/createDrawModes/spins-and-flips.js"></script>
+  <script src="../lib/modules/createDrawModes/int-map.js"></script>
+  <script src="../lib/modules/createDrawModes/weighted-spins.js"></script>
+  <script src="../lib/modules/VarInitializer/spin-image.js"></script>
+  <script src="../lib/modules/VarInitializer/spin-expectation-value.js"></script>
+  <script src="../lib/modules/VarInitializer/float-expectation-value.js"></script>
+  <script src="../lib/modules/VarInitializer/int-range.js"></script>
+  <script src="../lib/modules/ControlsAddOn/update-algorithms.js"></script>
+  <script src="../lib/modules/DataAggregator/protocol.js"></script>
+  <script src="../lib/modules/DataAggregator/mean-value.js"></script>
+  <script src="../lib/modules/DataAggregator/multi-series-mean-value.js"></script>
+  <script src="../lib/modules/DataAggregator/distribution.js"></script>
+  <script src="../lib/modules/DataAggregator/multi-series-distribution.js"></script>
+  <script src="../lib/modules/DataAggregator/cumulated.js"></script>
+  <script src="../lib/modules/DataAggregator/multi-series-cumulated.js"></script>
+  <script src="../lib/modules/DataAggregator/auto-correlation.js"></script>
+  <script src="../lib/modules/DataAggregator/multi-series-auto-correlation.js"></script>
+  <script src="../lib/modules/PlotDisplay/mean-value.js"></script>
+  <script src="../lib/modules/PlotDisplay/multi-series-mean-value.js"></script>
+  <script src="../lib/modules/PlotDisplay/distribution.js"></script>
+  <script src="../lib/modules/PlotDisplay/multi-series-distribution.js"></script>
+  <script src="../lib/modules/PlotDisplay/cumulated.js"></script>
+  <script src="../lib/modules/PlotDisplay/multi-series-cumulated.js"></script>
+  <script src="../lib/modules/PlotDisplay/auto-correlation.js"></script>
+  <script src="../lib/modules/PlotDisplay/multi-series-auto-correlation.js"></script>
+  <script src="../lib/modules/PlotDisplay/energy.js"></script>
+  <script src="../lib/modules/PlotBackend/webworker.js"></script>
+
+  <script src="../lib/spimosimNetwork/networkCore.js"></script>
+  <script src="../lib/spimosimNetwork/networkUi.js"></script>
+  <script src="../lib/modules/Network/1d-lattice.js"></script>
+  <script src="../lib/modules/Network/2d-lattice.js"></script>
+  <script src="../lib/modules/Network/moore2d-lattice.js"></script>
+  <script src="../lib/modules/Network/nd-lattice.js"></script>
+  <script src="../lib/modules/Network/quadratic.js"></script>
+  <script src="../lib/modules/Network/spimosim.js"></script>
+  <script src="../lib/modules/Network/barabasi-albert.js"></script>
+  <script src="../lib/modules/Network/barabasi-albert-lattice-vis.js"></script>
+  <script src="../lib/modules/NetworkUi/1d-lattice.js"></script>
+  <script src="../lib/modules/NetworkUi/2d-lattice.js"></script>
+  <script src="../lib/modules/NetworkUi/moore2d-lattice.js"></script>
+  <script src="../lib/modules/NetworkUi/nd-lattice.js"></script>
+  <script src="../lib/modules/NetworkUi/quadratic.js"></script>
+  <script src="../lib/modules/NetworkUi/spimosim.js"></script>
+  <script src="../lib/modules/NetworkUi/barabasi-albert.js"></script>
+  <script src="../lib/modules/NetworkUi/barabasi-albert-lattice-vis.js"></script>
+  <script>spimosimNetwork.MAX_NODES = 65536</script>
+  
+  <script src="../lib/spimosimUi/model-changer.js"></script>
+  <script src="../lib/spimosimUi/movable-sections.js"></script>
+  <script src="../template/generateHelpText.js"></script>
+  <script src="../dsmc/particle-video.js"></script>
+
+  <script src="../lib/spimosimUi/dark-theme-switch.js"></script>
+  <script src="../ising/model-config.js"></script>
+  <script src="../dsmc/model-config.js"></script>
+  <script src="corona/model-config.js"></script>
+  <script src="bornholdt/bornholdt-config.js"></script>
+  <script src="bornholdt-with-c-spins/bornholdt-with-c-spins-config.js"></script>
+  <script src="bornholdt_fixed_m/bornholdt_fixed_m-config.js"></script>
+  <script src="continuous/continuous-config.js"></script>
+  <script src="conways-game-of-life/conways-game-of-life-config.js"></script>
+  <script src="custom-local-field/custom-local-field-config.js"></script>
+  <script src="int/int-config.js"></script>
+  <script src="opinion/opinion-config.js"></script>
+
+  <script src="../ising/plots/data-aggregators.js"></script>
+  <script src="../ising/plots/plot-displays.js"></script>
+  <script src="bornholdt/plots/ising-market-data-aggregators.js"></script>
+  <script src="bornholdt/plots/ising-market-plot-displays.js"></script>
+
+  <script>
+    var ising = spimosimCore.modules.get("ModelConfig", "Ising Model");
+    ising.info.url = "../ising/model-info.html";
+    ising.simulation.backend.urls[6] = "../../../ising/model.js";
+    ising.plotter.defaultPlots = [];
+    
+    var dsmc = spimosimCore.modules.get("ModelConfig", "Direct Simulation Monte Carlo");
+    dsmc.info.url = "../dsmc/model-info.html"
+    dsmc.simulation.backend.urls[5] = "../../../dsmc/model.js"
+    dsmc.plotter.backend.urls[4] = "../../../dsmc/plots/plot-computers.js";
+
+var modelChanger;
+onload = function () {
+  // Make sections movable
+  if (!modelChanger) {
+    modelChanger = new ModelChanger(
+      document.getElementById('heading0'),
+      spimosimCore.modules.list("ModelConfig"),
+      {
+        downloads: document.getElementById('downloads0'),
+        info: document.getElementById('info0'),
+        help: document.getElementById('help0'),
+        plotter: [
+          document.getElementById('plotter0'),
+        ],
+        video: [
+                  document.getElementById('video0'),
+                ],
+        controls: document.getElementById('controls0')
+    });
+  }
+  makeSectionsMovable(document.getElementsByClassName('main')[0]);
+};
+  </script>
+</body>
+</html>

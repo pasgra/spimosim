@@ -1,0 +1,12 @@
+<p style="font-weight:bold;font-size:larger">Disclaimer: This models does not try to recreate realistic epidemic dynamics. It is based on stupid assuptions only a physicist would come up with who did not even try to read any medical papers.</p>
+
+<p>This is a simple model of an epidemic  with 6 states:</p>
+<img style="width:70rem;max-width:100%;background:#F0F5FFF1" src="corona/corona-states.svg">
+
+<p>To get to the incubation state you need to have contact with someone who is either in the incubation the mild or the severe state. For simplicity we assume all these contacts cause an infection.</p>
+
+<p>In the incubation phase the probability to get to the mild or the severe state raises every day. Similary the probability to get imune raises every day in the mild and the severe state.</p>
+
+<p>In the severe state everyone has the same chance to die each day as long as the number of severe cases is smaller than the number of beds. If no beds are left the chance of death is increased.</p>
+
+<p>If someone has a mild or a severe course of the illness is selected randomly.</p>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../ext_lib/css/radio-checkbox.css" />
+  <link rel="stylesheet" href="../ext_lib/css/sliders.css" />
+  <link rel="stylesheet" href="../lib/spimosimUi/css/spimosim.css" />
+  <link rel="stylesheet" href="../lib/spimosimUi/css/spimosim-dark.css" />
+
+  <link rel="icon" href="../lib/spimosimUi/icon/favicon.svg" />
+
+  <title>Corona</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="spimosim-dark has-header-image">
+  <h1 id="heading0" class="model-heading"></h1>
+
+  <div class="main">
+    <section id="info0"></section>
+    <section id="controls0"></section>
+    <section id="video0"></section>
+    <section id="plotter0"></section>
+    <section id="downloads0"></section>
+    <section id="help0"></section>
+  </div>
+<footer><div><div class="used-libs">Used libraries: <ul><li class="used-lib"><a href="http://spimosim.pascalgrafe.net">SpiMoSim</a><a class="lib-license" href="http://spimosim.pascalgrafe.net/LICENSE.txt">(License)</a>, </li><li class="used-lib"><a href="https://modernizr.com/">Modernizr</a><a class="lib-license" href="../ext_lib/lib/modernizr/modernizr-custom.js">(License)</a>, </li><li class="used-lib"><a href="http://dygraphs.com/">Dygraph</a><a class="lib-license" href="../ext_lib/lib/dygraph/dygraph-2.0.0.min.js">(License)</a>, </li><li class="used-lib"><a href="https://jnordberg.github.io/gif.js/">gif.js</a><a class="lib-license" href="../ext_lib/lib/gif.js/LICENSE">(License)</a>, </li><li class="used-lib"><a href="http://www.numericjs.com/">numeric.js</a><a class="lib-license" href="../ext_lib/lib/numeric/license.txt">(License)</a>, </li><li class="used-lib"><a href="http://visjs.org/">vis.js</a><a class="lib-license" href="../ext_lib/lib/vis.js/vis-network.min.js">(License)</a></li></ul></div><div class="author">Powered by <a href="http://spimosim.pascalgrafe.net">SpiMoSim</a> by Pascal Grafe</div></div></footer>  <script src="../ext_lib/lib/modernizr/modernizr-custom.js"></script>
+  <script src="../ext_lib/lib/dygraph/dygraph-2.0.0.min.js"></script>
+  <script src="../ext_lib/lib/gif.js/gif.js"></script>
+  <script src="../ext_lib/lib/vis.js/vis-network.min.js"></script>
+
+  <script src="../lib/spimosimCore/polyfill.js"></script>
+  <script src="../lib/spimosimCore/tools.js"></script>
+  <script src="../lib/spimosimCore/spimosimCore.js"></script>
+  
+  <script src="../lib/spimosimUi/polyfill.js"></script>
+  <script src="../lib/spimosimUi/graphic-tools.js"></script>
+  <script src="../lib/spimosimUi/spimosimUi.js"></script>
+  <script src="../lib/spimosimUi/model-changer.js"></script>
+  <script src="../lib/spimosimUi/movable-sections.js"></script>
+  <script src="../lib/spimosimNetwork/networkCore.js"></script>
+  <script src="../lib/spimosimNetwork/networkUi.js"></script>
+  <script src="../ext_lib/lib/dygraph/dygraph-2.0.0.min.js"></script>
+  <link rel="stylesheet" href="../ext_lib/lib/dygraph/dygraph.css" />
+  <script src="../lib/modules/DataAggregator/mean-value.js"></script>
+  <script src="../lib/modules/DataAggregator/auto-correlation.js"></script>
+  <script src="../lib/modules/DataAggregator/distribution.js"></script>
+  <script src="../lib/modules/DataAggregator/cumulated.js"></script>
+  <script src="../lib/modules/DataAggregator/protocol.js"></script>
+  <script src="../lib/modules/PlotDisplay/mean-value.js"></script>
+  <script src="../lib/modules/PlotDisplay/auto-correlation.js"></script>
+  <script src="../lib/modules/PlotDisplay/distribution.js"></script>
+  <script src="../lib/modules/PlotDisplay/cumulated.js"></script>
+  <script src="../lib/modules/SimulationBackend/webworker.js"></script>
+  <script src="../lib/modules/createDrawModes/int-map.js"></script>
+  <script src="../lib/modules/ProtocolVar/typed-array.js"></script>
+  <script src="../lib/modules/ProtocolVar/spin-array.js"></script>
+  <script src="../lib/modules/ProtocolVar/typed.js"></script>
+  <script src="../lib/modules/Network/2d-lattice.js"></script>
+  <script src="../lib/modules/Network/quadratic.js"></script>
+  <script src="../lib/modules/Video/2d-lattice.js"></script>
+  <script src="../lib/modules/NetworkUi/quadratic.js"></script>
+  <script src="../lib/modules/Network/barabasi-albert.js"></script>
+  <script src="../lib/modules/Video/network.js"></script>
+  <script src="../lib/modules/NetworkUi/barabasi-albert.js"></script>
+  <script src="../lib/modules/Network/barabasi-albert-lattice-vis.js"></script>
+  <script src="../lib/modules/NetworkUi/barabasi-albert-lattice-vis.js"></script>
+  <script src="../lib/modules/Network/spimosim.js"></script>
+  <script src="../lib/modules/NetworkUi/spimosim.js"></script>
+
+  <script src="../lib/spimosimUi/dark-theme-switch.js"></script>
+  <script src="model-config.js"></script>
+
+  <script>
+var modelChanger;
+onload = function () {
+  if (!modelChanger) {
+    modelChanger = new ModelChanger(
+      document.getElementById('heading0'),
+      [ 'Corona' ],
+      {
+        'info': document.getElementById('info0'),
+        'controls': document.getElementById('controls0'),
+        'downloads': document.getElementById('downloads0'),
+        'help': document.getElementById('help0'),
+        video: [
+          document.getElementById('video0'),
+        ],
+        plotter: [
+          document.getElementById('plotter0'),
+        ],
+    });
+  }
+  makeSectionsMovable(document.getElementsByClassName('main')[0]);
+};
+  </script>
+</body>
+</html>
