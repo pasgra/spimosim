@@ -137,6 +137,7 @@
 <script src="lib/modules/ProtocolVar/typed.js"></script>
 
 <script src="lib/modules/createDrawModes/int-map.js"></script>
+<script src="lib/modules/ControlsAddOn/update-algorithms.js"></script>
 
 <script type="text/js-worker" id="model-code">
 'use strict';
@@ -189,7 +190,7 @@ var EpidemicsModel = (function() {
       this.lastOpinion = differentOpinions; 
     }
 
-    switch (settings.updateAlgorithm) {
+    switch (settings.updateAlgorithms) {
       case 'random-sequential-update':
         this.step = randomSequentialStep;
 
