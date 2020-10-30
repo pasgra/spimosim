@@ -1308,7 +1308,6 @@ input[type="range"] {
   font-weight: normal;
   text-align: left;
   z-index: 26;
-  top: 1rem;
 }
 
 .plot-menu .range-setting label,
