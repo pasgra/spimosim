@@ -152,17 +152,17 @@ var parameters = {
   adaptCellCenterPositions: {
     labelText: 'Adapt cell center positions',
     type: 'checkbox',
-    enables: 'cellCenterMoveInterval'
   },
   cellCenterMoveInterval: {
     labelText: 'Cell centers move interval',
     type: 'range',
     logScale: true,
+    parent: 'adaptCellCenterPositions',
+    parentValue: true,
     step: 1,
     min: 1,
     max: 1e6,
     value: 10,
-    disabled: true
   }
 };
 
