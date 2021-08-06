@@ -170,6 +170,9 @@ if (location.hash.length <= 1 &&
   <script src="../lib/spimosimUi/graphic-tools.js"></script>
   <script src="../lib/spimosimUi/spimosimUi.js"></script>
   <script src="../lib/spimosimCreator/spimosimCreator.js"></script>
+  <script src="../lib/spimosimCreator/lib-info.js"></script>
+  <script src="../lib/spimosimCreator/ext-lib-info.js"></script>
+  <script src="../lib/spimosimUi/lib-info.js"></script>
 
   <script>
 (function () {
@@ -221,12 +224,14 @@ if (location.hash.length <= 1 &&
   <script defer src="../ext_lib/lib/codemirror/codemirror.js"></script>
   <script defer src="../ext_lib/lib/codemirror/javascript.js"></script>
         
+  <script defer src="../lib/spimosimNetwork/lib-info.js"></script>
   <script defer src="../lib/spimosimNetwork/networkCore.js"></script>
   <script defer src="../lib/spimosimNetwork/networkUi.js"></script>
   
   <script defer src="../lib/spimosimUi/dark-theme-switch.js"></script>
   
 
+  <script defer src="../lib/modules/Network/templates.js"></script>
   <script defer src="../lib/modules/Network/1d-lattice.js"></script>
   <script defer src="../lib/modules/Network/dynamic-directed.js"></script>
   <script defer src="../lib/modules/Network/random-undirected.js"></script>
@@ -239,6 +244,7 @@ if (location.hash.length <= 1 &&
   <script defer src="../lib/modules/Network/moore-quadratic.js"></script>
   <script defer src="../lib/modules/Network/spimosim.js"></script>
   
+  <script defer src="../lib/modules/NetworkUi/templates.js"></script>
   <script defer src="../lib/modules/NetworkUi/1d-lattice.js"></script>
   <script defer src="../lib/modules/NetworkUi/dynamic-directed.js"></script>
   <script defer src="../lib/modules/NetworkUi/random-undirected.js"></script>
@@ -251,6 +257,7 @@ if (location.hash.length <= 1 &&
   <script defer src="../lib/modules/NetworkUi/moore-quadratic.js"></script>
   <script defer src="../lib/modules/NetworkUi/spimosim.js"></script>
   
+  <script defer src="../lib/modules/Video/templates.js"></script>
   <script defer src="../lib/modules/Video/canvas.js"></script>
   <script defer src="../lib/modules/Video/1d-lattice.js"></script>
   <script defer src="../lib/modules/Video/2d-lattice.js"></script>
@@ -259,6 +266,7 @@ if (location.hash.length <= 1 &&
   <script defer src="../lib/modules/Video/network.js"></script>
   <script defer src="../lib/modules/Video/dynamic-directed-network.js"></script>
   
+  <script defer src="../lib/modules/DataAggregator/templates.js"></script>
   <script defer src="../lib/modules/DataAggregator/cumulated.js"></script>
   <script defer src="../lib/modules/DataAggregator/multi-series-cumulated.js"></script>
   <script defer src="../lib/modules/DataAggregator/distribution.js"></script>
@@ -270,6 +278,7 @@ if (location.hash.length <= 1 &&
   <script defer src="../lib/modules/DataAggregator/multi-series-mean-value.js"></script>
   <script defer src="../lib/modules/DataAggregator/energy.js"></script>
   
+  <script defer src="../lib/modules/PlotDisplay/templates.js"></script>
   <script defer src="../lib/modules/PlotDisplay/cumulated.js"></script>
   <script defer src="../lib/modules/PlotDisplay/multi-series-cumulated.js"></script>
   <script defer src="../lib/modules/PlotDisplay/distribution.js"></script>
@@ -281,37 +290,46 @@ if (location.hash.length <= 1 &&
   <script defer src="../lib/modules/PlotDisplay/energy.js"></script>
   
   <script defer src="../lib/modules/PlotBackend/webworker.worker.js"></script>
+  <script defer src="../lib/modules/PlotComputer/templates.js"></script>
   <script defer src="../lib/modules/PlotComputer/cumulated.js"></script>
   <script defer src="../lib/modules/PlotComputer/distribution.js"></script>
   <script defer src="../lib/modules/PlotComputer/auto-correlation.js"></script>
   <script defer src="../lib/modules/PlotComputer/mean-value.js"></script>
 
+  <script defer src="../lib/modules/ProtocolVar/templates.js"></script>
   <script defer src="../lib/modules/ProtocolVar/string.js"></script>
   <script defer src="../lib/modules/ProtocolVar/typed.js"></script>
   <script defer src="../lib/modules/ProtocolVar/typed-array.js"></script>
   <script defer src="../lib/modules/ProtocolVar/spin-array.js"></script>
   
+  <script defer src="../lib/modules/VarInitializer/templates.js"></script>
   <script defer src="../lib/modules/VarInitializer/spin-image.js"></script>
   <script defer src="../lib/modules/VarInitializer/spin-expectation-value.js"></script>
   <script defer src="../lib/modules/VarInitializer/copy.js"></script>
   <script defer src="../lib/modules/VarInitializer/int-range.js"></script>
   <script defer src="../lib/modules/VarInitializer/float-expectation-value.js"></script>
   
+  <script defer src="../lib/modules/ControlsAddOn/templates.js"></script>
   <script defer src="../lib/modules/ControlsAddOn/update-algorithms.js"></script>
   
+  <script defer src="../lib/modules/HelpTextGenerator/templates.js"></script>
   <script defer src="../lib/modules/HelpTextGenerator/ResearchGroupShort.js"></script>
   
+  <script defer src="../lib/modules/createDrawModes/templates.js"></script>
   <script defer src="../lib/modules/createDrawModes/spins-and-flips.js"></script>
   <script defer src="../lib/modules/createDrawModes/int-map.js"></script>
   <script defer src="../lib/modules/createDrawModes/custom-canvas.js"></script>
   <script defer src="../lib/modules/createDrawModes/grey-scale-spins.js"></script>
   <script defer src="../lib/modules/createDrawModes/weighted-spins.js"></script>
   
+  <script defer src="../lib/modules/SimulationBackend/templates.js"></script>
   <script defer src="../lib/modules/SimulationBackend/server.js"></script>
   <script defer src="../lib/modules/SimulationBackend/webworker.js"></script>
   <script defer src="../lib/modules/SimulationBackend/synchronous.js"></script>
+  <script defer src="../lib/modules/FitBackend/templates.js"></script>
   <script defer src="../lib/modules/FitBackend/webworker.js"></script>
   <script defer src="../lib/modules/FitBackend/synchronous.js"></script>
+  <script defer src="../lib/modules/PlotBackend/templates.js"></script>
   <script defer src="../lib/modules/PlotBackend/webworker.js"></script>
   <script defer src="../lib/modules/PlotBackend/synchronous.js"></script>
 </body>

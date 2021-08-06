@@ -12,10 +12,6 @@ footer {
   flex: 0;
 }
 
-.creator-config {
-  padding: .5em;
-}
-
 .creator-preview>* {
   padding: .5em;
 }
@@ -30,7 +26,6 @@ footer {
 
 .creator-config {
   flex: 1 1 40em;
-  background-color: #CDF4FF;
   border: dotted .4rem darkslategrey;
   border-left: 0rem;
   counter-reset: configheading;
@@ -38,17 +33,124 @@ footer {
   box-sizing: border-box;
   position: sticky;
   top: 0;
+  padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
   scroll-snap-align: start;
 }
-.creator-config * {  
+
+.creator-tab {
+  padding: .5em;
+  background-color: #CDF4FF;
+  counter-reset: configheading;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: 0 0 0.2rem darkslategray;
+}
+
+.creator-tab * {  
   font-family: monospace;
 }
 
-.creator-config h2::before {
+.creator-tab h2::before {
   content: counter(configheading) '. ';
   counter-increment: configheading;
+}
+
+.creator-tab-bar {
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.creator-tab-button {
+  background: #A1B8F0;
+  box-shadow: 0 0 0.2rem darkslategrey;
+  clip-path: polygon(-100% 100%,200% 100%,200% -100%,-100% -100%);
+  padding-bottom: 0.8rem;
+  margin: 0.4rem 0.4rem 0 0.4rem;
+  color: darkslategrey;
+}
+
+.creator-tab-button-error {
+  text-decoration: underline wavy #901020;
+}
+
+.creator-tab-button-changed::after {
+  content: ' *';
+}
+
+.creator-tab-button:active,
+.creator-tab-button-active {
+  background: #CDF4FF;
+}
+
+.creator-tab-button:hover,
+.creator-tab-button:focus {
+  background: #4682b4;
+}
+
+.creator-tab-new-module {
+
+}
+
+.creator-tab .error-message {
+  display: none;
+  max-height: 20rem;
+  overflow-y: auto;
+  margin: 1rem;
+}
+
+.error-message .error-text {
+  white-space: pre-wrap;
+  color: black;
+  padding-left: 2ch;
+}
+
+.error-message .error-line {
+}
+
+.creator-tab-error .error-message {
+  display: block;
+}
+
+.spimosim-dark .error-message .error-text {
+  color: white;
+}
+
+.creator-advanced {
+  animation-duration: 1s, 3s;
+  animation-timing-function: ease, ease;
+}
+
+body:not(.advanced-mode) .creator-advanced {
+  display: none;
+}
+
+.advanced-mode-new .creator-advanced {
+  animation-name: expand-advanced, uncolor-advanced;
+}
+
+@keyframes expand-advanced {
+  from {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  to {
+  }
+}
+
+@keyframes uncolor-advanced {
+  0% {
+  }
+
+  30% {
+    background-color: white;
+  }
+
+  100% {
+  }
 }
 
 .preview-tools {
@@ -81,7 +183,7 @@ footer {
   background-color: #4682B4;
 }
 
-.spimosim-dark .creator-config {
+.spimosim-dark .creator-tab {
   background-color: #4682B4;
 }
 
@@ -147,19 +249,73 @@ footer {
   border-color: white;
 }
 
-.creator-config h2 {
+.spimosim-dark .creator-tab-button {
+  background: #2D5373;
+  box-shadow: 0 0 0.2rem #4682B4;
+  color: unset;
+}
+
+.spimosim-dark .creator-tab {
+  box-shadow: 0 0 0.2rem #4682B4;
+}
+
+.spimosim-dark .creator-tab-button:active,
+.spimosim-dark .creator-tab-button-active {
+  background: #4682B4;
+}
+
+.creator-tab h2 {
   margin-top: 2em;
 }
 
+.settings > div.module-description {
+  display: block;
+}
 
+.module-tab-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  text-align: center;
+}
+
+.module-tab-heading>div {
+  flex: 1;
+  margin: 0;
+}
+
+.module-tab-heading>button {
+  align-self: center;
+  height: min-content;
+}
+
+.import-export {
+  position: static;
+  margin: 1em 0;
+}
+
+.import-export > div,
 .preview-buttons {
   display: flex;
 }
 
-.preview-buttons > button {
-  padding-left: 5em;
-  padding-right: 5em;
-  height: 5em;
+.import-export > div > .select-setting {
+  flex: 1;
+}
+
+.import-export > div > button {
+  padding: 1em;
+  margin: .8rem 0;
+}
+
+.import-export > div > button+button {
+  margin-left: .3rem;
+}
+
+.preview-buttons > button:first-child {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  height: 4rem;
   flex: auto;
 }
 
@@ -167,6 +323,38 @@ footer {
   background-image: url(../lib/spimosimUi/icon/restart-white.svg) !important;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.model-menu-button {
+  /*background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='16' height='16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23'%3E%3Cg fill-rule='evenodd' fill='%23FFF'%3E%3Cpath d='m15 10.5v2h-6v-2h1v1l4-0v-1h1'/%3E%3Cpath d='m12.5 8.5v-4h1l-1.5-2-1.5 2h1v4'/%3E%3Cpath d='m1 10.5v2h6v-2h-1v1h-4v-1h-1'/%3E%3Cpath d='m3.5 2.5h1v4h1l-1.5 2-1.5-2h1v-4'/%3E%3Cpath d='m10 2.5-3 6h-1l3-6z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-size: contain;*/
+  background-image: url('../lib/spimosimUi/icon/tools.svg');
+  flex-basis: 4rem;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: transparent;
+  box-shadow: none;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  opacity: 1;
+}
+
+.spimosim-dark .model-menu-button {
+  background-image: url('../lib/spimosimUi/icon/light/tools.svg');
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.model-menu-button:hover,
+.model-menu-button:focus {
+  opacity: 0.8;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.model-menu-button:active {
+  opacity: 0.6;
 }
 
 .parameter-config,
@@ -212,6 +400,11 @@ footer {
 .checkbox-line {
   display: flex;
   flex-wrap: wrap;
+}
+
+.checkbox-line .checkbox-setting {
+  padding: 0.3rem 0;
+  margin-right: 0.6rem;
 }
 
 .buffer-config .number-setting,
