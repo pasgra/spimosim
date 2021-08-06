@@ -794,6 +794,10 @@ input[type="range"] {
   margin: .8rem 0;
 }
 
+.settings .checkbox-setting {
+  margin: 0 0;
+}
+
 .settings .text-setting label,
 .settings .jscode-setting label,
 .settings .string-setting label,
