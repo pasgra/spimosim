@@ -1,0 +1,8 @@
+ControlsAddOn.preprocessorConfig
+ControlsAddOn(settings, controls, settingsClass, headingText)
+ControlsAddOn.prototype.hasValue()
+ControlsAddOn.prototype.getValue(modelSettings, autoStart)
+ControlsAddOn.prototype.hasGui()
+ControlsAddOn.prototype.initGui()
+ControlsAddOn.prototype.getMainElement()
+ControlsAddOn.prototype.addToKeyMap(keyMap)
