@@ -221,3 +221,8 @@ body.spimosim-dark {
 .spimosim-dark .dygraph-title:hover {
   background-image: url(../icon/light/grab.svg) !important;
 }
+
+.spimosim-dark .dygraph-legend {
+  background-color: #101219C0;
+  text-shadow: 0 0 1em #101219,0 0 1em #101219,0 0 1em #101219,0 0 1em #101219,0 0 1em #101219,0 0 1em #101219;
+}

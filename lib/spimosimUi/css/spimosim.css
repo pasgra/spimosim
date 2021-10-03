@@ -1366,6 +1366,21 @@ input[type="range"] {
   cursor: move;
 }
 
+.dygraph-label.dygraph-title {
+  text-align: center;
+}
+
+.dygraph-legend {
+  z-index: 1;
+  position: relative;
+  margin: 0 1.2rem;
+  top: unset !important;
+  left: unset !important;
+  display: inline-block;
+  background-color: #e9eceec0;
+  text-shadow: 0 0 1em #e9ecee,0 0 1em #e9ecee,0 0 1em #e9ecee,0 0 1em #e9ecee,0 0 1em #e9ecee,0 0 1em #e9ecee;
+}
+
 .faded,
 .faded .dygraph-axis-label {
   color: slategrey;
