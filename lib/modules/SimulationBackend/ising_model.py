@@ -1,19 +1,19 @@
 import random
-import spimosim_server
+from pyspimosim.base_model import BaseModel, RunSettings, main as _main
 import sys
 import numpy as np
 from math import exp
 
-class IsingModel:
-    def __init__(self, model_settings):
+class IsingModel(BaseModel):
+    def __init__(self, backend, model_settings, run_settings):
+        super().__init__(backend, model_settings, run_settings)
         self.state = {}
         self.change_settings(model_settings)
 
-    def change_settings(self, model_settings, restart):
+    def change_settings(self, model_settings, restart=False):
         self.j = model_settings['parameters']['j']
         self.beta = model_settings['parameters']['beta']
-        self.width = model_settings['network']['width']
-        self.height = model_settings['network']['height']
+        self.width = self.height = model_settings['network']['L']
         self.state['sigma'] = np.full(self.width * self.height, -1, np.int8)
         self.state['magnetisation'] = sum(self.state['sigma']) * 1.
 
@@ -38,12 +38,12 @@ class IsingModel:
 
             sigma[k] = 1 if random.random() > 1 / (1 + exp(betaj * s)) else -1
         self.state['magnetisation'] = sum(self.state['sigma']) * 1.
-        
 
-def main(argv):
-    argv2 = [ '127.0.0.1', '8090', r'/' ]
-    argv2[0:len(argv)] = argv
-    spimosim_server.start(*argv2, IsingModel)
+Model = IsingModel
+ModelSettings = RunSettings
+
+def main(args=None):
+    _main(Model, ModelSettings, args=args)
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main()

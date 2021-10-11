@@ -255,6 +255,14 @@ var modelConfig = {
 
       name: modelName         // The name of the model to load in the webworker
     },
+/*
+    // Alternative backend written in python or other languages
+    // See: lib/modules/SpimosimBackend/backend.py
+    backend: {
+      type: "server",
+      url: "ws://localhost:8090"
+    },
+*/
 
     continuableWithNewSettings: true
                               // The simulation can be continued with new
