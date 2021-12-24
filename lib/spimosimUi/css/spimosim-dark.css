@@ -218,6 +218,23 @@ body.spimosim-dark {
   background-image: url('../icon/light/ok.svg') !important;
 }
 
+.spimosim-dark .unpin-section {
+  background-image: url('../icon/light/unpin.svg') !important;
+}
+
+.spimosim-dark .spimosim-floating .unpin-section {
+  background-image: url('../icon/light/pin.svg') !important;
+}
+
+.spimosim-dark .expand-section {
+  background-image: url('../icon/light/horizontal-expand.svg') !important;
+}
+
+.spimosim-dark .whole-width .expand-section {
+  background-image: url('../icon/light/horizontal-unexpand.svg') !important;
+}
+
+
 .spimosim-dark .dygraph-title:hover {
   background-image: url(../icon/light/grab.svg) !important;
 }
@@ -225,4 +242,8 @@ body.spimosim-dark {
 .spimosim-dark .dygraph-legend {
   background-color: #101219C0;
   text-shadow: 0 0 1em #101219,0 0 1em #101219,0 0 1em #101219,0 0 1em #101219,0 0 1em #101219,0 0 1em #101219;
+}
+
+.spimosim-dark section.spimosim-floating {
+  box-shadow: 0 0 0.8rem #40487d;
 }

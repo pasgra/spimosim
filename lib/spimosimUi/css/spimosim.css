@@ -285,6 +285,7 @@ input[type="range"] {
   position: relative;
 }
 
+.icon-button,
 .prev-model,
 .next-model,
 .skip-to-first,
@@ -308,6 +309,8 @@ input[type="range"] {
   transition-duration: .3s;
 }
 
+.icon-button:focus,
+.icon-button:hover,
 .prev-model:focus,
 .prev-model:hover,
 .next-model:focus,
@@ -333,6 +336,7 @@ input[type="range"] {
   opacity: .9;
 }
 
+.icon-button:active,
 .prev-model:active,
 .next-model:active,
 .skip-to-first:active,
@@ -1542,4 +1546,42 @@ footer {
   .section-drag-bar {
     display: none;
   }
+}
+
+.unpin-section,
+.expand-section {
+  float: right;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: 0 0.3rem;
+}
+
+.unpin-section {
+  background-image: url('../icon/unpin.svg') !important;
+}
+
+.spimosim-floating .unpin-section {
+  background-image: url('../icon/pin.svg') !important;
+}
+
+.expand-section {
+  background-image: url('../icon/horizontal-expand.svg') !important;
+}
+
+.whole-width .expand-section {
+  background-image: url('../icon/horizontal-unexpand.svg') !important;
+}
+
+.spimosim-floating.whole-width {
+  width: calc(50vw - 3rem);
+}
+
+.spimosim-floating {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+
+section.spimosim-floating {
+  box-shadow: 0 0 0.8rem #d3d8ff;
 }
