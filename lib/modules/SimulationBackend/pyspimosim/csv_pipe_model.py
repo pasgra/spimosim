@@ -34,6 +34,8 @@ class CSVPipeReader:
                 os.remove(path)
             except FileNotFoundError:
                 pass
+
+        if not os.path.exists(path):
             os.system(f"mkfifo {path}")
 
         self.file_fields = file_fields
@@ -87,11 +89,14 @@ class CSVPipeWriter(ABC):
                 os.remove(path)
             except FileNotFoundError:
                 pass
+
+        if not os.path.exists(path):
             os.system(f"mkfifo {path}")
 
         self.control = None
         self.control_fields = control_fields
-    
+        self.file = None
+
     def open_file(self):
         self.file = open(self.path, "w", buffering=1) # open with line buffering
     
