@@ -279,6 +279,12 @@ DSMCModel.prototype.move = function () { // n times updates a random spins
   var xMax = this.settings.parameters.xMax;
   var yMax = this.settings.parameters.yMax;
   var zMax = this.settings.parameters.zMax;
+  var xMaxOpen = this.settings.parameters.xMaxOpen;
+  var yMaxOpen = this.settings.parameters.yMaxOpen;
+  var zMaxOpen = this.settings.parameters.zMaxOpen;
+  var xMinOpen = this.settings.parameters.xMinOpen;
+  var yMinOpen = this.settings.parameters.yMinOpen;
+  var zMinOpen = this.settings.parameters.zMinOpen;
   var n = this.settings.parameters.n;
   var x1, y1, z1, x2, y2, z2, vx1, vy1, vz1, cell;
   this.cellContent = [];
@@ -337,28 +343,30 @@ DSMCModel.prototype.move = function () { // n times updates a random spins
     }
 
     if (!hit) {
-      if (x2 > xMax) {
+      if ((x2 > xMax) && xMaxOpen || (x2 < 0) && xMinOpen || (y2 > yMax) && yMaxOpen || (y2 < 0) && yMinOpen || (z2 > zMax) && zMaxOpen || (z2 < 0) && zMinOpen) {
         x2 = 0.2 * Math.random() * dt;
         y2 = Math.random() * yMax;
         z2 = Math.random() * zMax;
         this.vx[i] = .2 * (Math.random() + .5);
         this.vy[i] = .2 * (Math.random() - .5);
         this.vz[i] = .2 * (Math.random() - .5);
-      } else if (x2 < 0) {
-        x2 = x1;
-        this.vx[i] *= -1;
-      }
-      
-      if (y2 > yMax || y2 < 0) {
-        y2 = y1;
-        this.vy[i] *= -1;
-        hit = true;
-      }
-      
-      if (z2 > zMax || z2 < 0) {
-        z2 = z1;
-        this.vz[i] *= -1;
-        hit = true;
+      } else {
+        if (x2 > xMax && !xMaxOpen || x2 < 0 && !xMinOpen) {
+          x2 = x1;
+          this.vx[i] *= -1;
+        }
+
+        if (y2 > yMax && !yMaxOpen || y2 < 0 && !yMinOpen) {
+          y2 = y1;
+          this.vy[i] *= -1;
+          hit = true;
+        }
+
+        if (z2 > zMax && ! zMaxOpen || z2 < 0 && !zMinOpen) {
+          z2 = z1;
+          this.vz[i] *= -1;
+          hit = true;
+        }
       }
 
       this.x[i] = x2;

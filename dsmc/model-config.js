@@ -99,7 +99,7 @@ var parameters = {
     max: 10,
     value: 2,
     step: 'any',
-    key: 'w',
+    key: 'x',
   },
   yMax: {
     labelText: 'y<sub>max</sub>',
@@ -107,7 +107,7 @@ var parameters = {
     max: 10,
     value: 2,
     step: 'any',
-    key: 'h',
+    key: 'y',
   },
   zMax: {
     labelText: 'z<sub>max</sub>',
@@ -115,7 +115,37 @@ var parameters = {
     max: 10,
     value: 2,
     step: 'any',
-    key: 'h',
+    key: 'z',
+  },
+  xMinOpen: {
+    labelText: 'Open towards x<sub>min</sub>',
+    type: 'checkbox',
+    value: false
+  },
+  xMaxOpen: {
+    labelText: 'Open towards x<sub>max</sub>',
+    type: 'checkbox',
+    value: true
+  },
+  yMinOpen: {
+    labelText: 'Open towards y<sub>min</sub>',
+    type: 'checkbox',
+    value: false
+  },
+  yMaxOpen: {
+    labelText: 'Open towards y<sub>max</sub>',
+    type: 'checkbox',
+    value: false
+  },
+  zMinOpen: {
+    labelText: 'Open towards z<sub>min</sub>',
+    type: 'checkbox',
+    value: false
+  },
+  zMaxOpen: {
+    labelText: 'Open towards z<sub>max</sub>',
+    type: 'checkbox',
+    value: false
   },
   boundariesX: {
     labelText: 'Boundaries: x(y,z);...',
