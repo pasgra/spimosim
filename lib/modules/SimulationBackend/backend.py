@@ -38,9 +38,16 @@ class HttpRequestHandler(http.server.CGIHTTPRequestHandler):
             http_status = int(args[1])
             if http_status >= 200 and http_status < 400:
                 return
-        except:
+        except Exception:
             pass
         super().log_message(format_str, *args)
+
+
+    def handle(self):
+        try:
+            http.server.CGIHTTPRequestHandler.handle(self)
+        except BrokenPipeError:
+            pass
 
 def start_http_server(model, www_root, listen_on):
     message = f"Webserver listens on http://{listen_on[0]}:{listen_on[1]}"

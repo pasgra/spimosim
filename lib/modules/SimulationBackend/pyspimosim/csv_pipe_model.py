@@ -4,6 +4,7 @@ import sys
 from abc import ABC, abstractmethod, abstractproperty
 from dataclasses import dataclass, field, fields, MISSING
 from pyspimosim.base_model import BaseModel, RunSettings as BaseRunSettings
+import logging
 
 def to_numbers(obj):
     if type(obj) is list:
@@ -69,8 +70,12 @@ class CSVPipeReader:
     def fill_buffer(self):
         for i in range(self.block_size):
             fields = self.readline()
-            for j, (key, factor) in enumerate(self.file_fields):
-                self.buf[i][key] = float(fields[j]) * factor
+            try:
+                for j, (key, factor) in enumerate(self.file_fields):
+                    self.buf[i][key] = float(fields[j]) * factor
+            except Exception as e:
+                logging.debug(f"Error in CSVPipeReader: {e}\nRead {len(fields)} fields: {fields}\nExpected {len(self.file_fields}\ncsv_pipe_reader.file_fields: {self.file_fields}")
+                raise e
 
 
 class CSVPipeWriter(ABC):

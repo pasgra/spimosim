@@ -76,6 +76,9 @@ class Backend():
                 self.send_protocol()
                 msg = '{"type":"done","t":' + str(self.t) + '}'
                 self.handler.write_message(msg)
+        except tornado.websocket.WebSocketClosedError as e:
+            self.handler.close()
+            self.pause()
         except Exception as e:
             self.handler.send_error(str(e))
             self.handler.close()
