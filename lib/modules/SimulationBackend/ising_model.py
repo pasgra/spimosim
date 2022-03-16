@@ -1,3 +1,5 @@
+# See Readme_Ising_model.md for details
+
 import random
 from pyspimosim.base_model import BaseModel, RunSettings, main as _main
 import sys
