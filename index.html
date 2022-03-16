@@ -47,35 +47,41 @@
   </style>
 </head>
 <body>
-  <div id="spimosim" /><header>SpiMoSim</header></div>
+  <div id="spimosim"><header>SpiMoSim</header></div>
   <div class="main">
   <section class="main-info">
     <h1>About the library</h1>
-    <p class="abstract">A modular javascript library for interactive physical models (mostly agent based models) by Pascal Grafe</p>
+    <p class="abstract">A modular javascript library by Pascal Grafe to create user interfaces for simulations</p>
     
-    <h2>Where does it run?</h2>
-    <p>If you see an animated SpiMoSim logo on top of this page, SpiMoSim is running right now in your browser! <sup><a href="#footnote1">1</a></sup></p>
-    <p>Every application built with SpiMoSim will <sup><a href="#footnote2">2</a></sup> run in every modern Browsers on desktop computers as well as on smartphones and tablet computers because it only relies on web technologies like HTML, Javascript and CSS. <a href='https://blogs.oracle.com/java-platform-group/moving-to-a-plugin-free-web'>(Java is dead!)</a></p>
+    <p>SpiMoSim was originally created with simple models for physical, economic and social systems on a lattice of interacting spins, agents or similar in mind. Think of the Ising model or Conway's Game of Life.</p>
+    <p>The library is highly modular which makes it useful for a much broader range of applications. In principle it can function as a GUI for any program that has some settings chosen by the user and produces data in time steps. The settings might be a couple of numbers. The user sees plots of time series and an image visuaizes the state at each step.</p>
+    <p>A design goal of SpiMoSim is to minimize the amount of code necessary to build an application. For agent based models a JSON configuration file and two javascript functions can be enough.</p>
+    <p><i>(By the way, if you see an animated SpiMoSim logo on top of this page, SpiMoSim is running right now in your browser.<sup><a href="#footnote1">1</a></sup>)</i></p>
+
     <h2>How to build applications with SpiMoSim?</h2>
-    <p>You do not need to be a web developer to get startet with SpiMoSim. You need to know a <i>little</i> <a href="https://www.w3schools.com/js/">Javascript</a>. <a href="https://github.com/pasgra/spimosim/releases">Download the example application</a> (Ising model) and give it a try!</p>
+    <p>SpiMoSim is build with web technologies in Javascript, HTML and CSS. But you do not need to be a web developer to use it for creating applications. You can try out the <a href="spimosimCreator">SpiMoSim Creator</a> directly in your browser. It might be helpful if you know a <i>little</i> <a href="https://www.w3schools.com/js/">Javascript</a>. Or <a href="https://github.com/pasgra/spimosim/releases">download the latest version of SpiMoSim</a> including some example applications (Ising model) and give it a try!</p>
+    <p>Due to the modularity of SpiMoSim the application/simulation does not need to run directly in the browser. It can communicate with an application running on some server or your local computer via a Websocket connection. You can write the application/simulation core in any language with a websocket library and let SpiMoSim provide the GUI. An implementation in Python is available in the <a href="https://github.com/pasgra/spimosim/tree/master/lib/modules/SimulationBackend/Readme_Ising_model.md">Github repository</a>.</p>
     
-    <h2>It is free software!</h2>
-    <p>SpiMoSim is published under the terms and conditions of the <a href="LICENSE.txt">MIT-LICENSE</a>.</p>
+    <h2>License</h2>
+    <p>SpiMoSim is free software under the terms and conditions of the <a href="LICENSE.txt">MIT-LICENSE</a>.</p>
     <div class="footnotes">
-      <p id="footnote1" class="footnote">
-        <sup>1</sup>What you see is the Multiple Epidemics Model by K. Sneppen et al. run on a 2D lattice (connections between the <i>text</i> and the <i>background</i> were removed):
-        <p class="paper">Sneppen K, Trusina A, Jensen MH, Bornholdt S (2010) A Minimal Model for Multiple Epidemics and Immunity Spreading. PLoS ONE 5(10): e13326.
-        <a href="http://doi.org/doi:10.1371/journal.pone.0013326">doi:10.1371/journal.pone.0013326</a><p>
-      </p>
-      <p id="footnote2" class="footnote">
-        <sup>2</sup>If it does not, <a href="https://github.com/pasgra/spimosim/issues">let me know!</a>
-      </p>
+      <div id="footnote1" class="footnote">
+        <p>
+          <sup>1</sup>What you see is the Multiple Epidemics Model by K. Sneppen et al. run on a 2D lattice (no connections between the <i>text</i> and the <i>background</i>):<br/>
+        </p>
+        <p class="paper">
+            Sneppen K, Trusina A, Jensen MH, Bornholdt S (2010) A Minimal Model for Multiple Epidemics and Immunity Spreading. PLoS ONE 5(10): e13326.
+            <a href="http://doi.org/doi:10.1371/journal.pone.0013326">doi:10.1371/journal.pone.0013326</a>
+        </p>
+      </div>
+      <div id="footnote2" class="footnote">
+        <p><sup>2</sup>Please report errors or submit suggestions on <a href="https://github.com/pasgra/spimosim/issues">Github</a></p>
+      </div>
     </div>
   </section>
   
   <section class="main-info">
     <h1>Demonstrations</h1>
-    <h2>General</h2>
     <ul>
       <li>
         <a href="ising">Ising Model</a>
@@ -83,25 +89,28 @@
       </li>
       <li>
         <a href="http://www.pascalgrafe.net/spimosim/models#model=Bornholdt">The Bornholdt Model with strategy spins</a>
-        <p>A fully featured version of the market model by S. Bornholdt <sup><a href="#footnote3">3</a></p>
+        <p>A fully featured version of the market model by S. Bornholdt <sup><a href="#footnote3">3</a></sup></p>
+      </li>
+      <li>
+        <a href="dsmc">Direct Simulation Monte Carlo</a>
+        <p>A particle simulator for low density gases. This demonstration with 3D graphics is also included in the download.</p>
+      </li>
+      <li>
+        <p>A collection of different models at <a href="http://www.itp.uni-bremen.de/complex/interactive-models">Complex Systems Lab.</a></p>
+      </li>
+      <li>
+        <p>Different models implemented by Pascal Grafe available at <a href="http://www.pascalgrafe.net/spimosim/models/">pascalgrafe.net</a>
       </li>
     </ul>
     
-    <h2>Others</h2>
-    <p>More demonstrations can be found at <a href="http://www.pascalgrafe.net/spimosim/models/">pascalgrafe.net</a> and at <a href="http://www.itp.uni-bremen.de/complex/interactive-models">Complex Systems Lab.</a></p>
-    <p>Please let me know if you use SpiMoSim for your own projects.</p>
     <div class="footnotes">
-      <p id="footnote3" class="footnote">
+      <div id="footnote3" class="footnote">
         <p class="paper"><sup>3</sup>S. Bornholdt, Expectation bubbles in a spin model of markets: Intermittency from frustration across scales, Int. J. Mod. Phys. C, Vol. 12, No. 5 (2001) 667-674.</p>
-      </p>
+      </div>
     </div>
   </section>
 </div>
-</div>
 <footer>
-  <div>
-    
-  </div>
   <div>
     <div class="author">
       Powered by 
