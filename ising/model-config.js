@@ -257,7 +257,7 @@ var modelConfig = {
     },
 /*
     // Alternative backend written in python or other languages
-    // See: lib/modules/SpimosimBackend/backend.py
+    // See: PySpiMoSim repository
     backend: {
       type: "server",
       url: "ws://localhost:8090"
