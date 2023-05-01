@@ -1015,7 +1015,7 @@ input[type="range"] {
 .canvas-frame .video-menu>button {
   transition-property: opacity, transform;
   transition-duration: .3s;
-  opacity: 0;
+  opacity: 0.3;
 }
 
 .canvas-frame:hover .video-menu>button,
