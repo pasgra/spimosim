@@ -1,3 +1,0 @@
-function FitBackend(fit, backendSettings)
-FitBackend.prototype.fit = function (config)
-FitBackend.prototype.destroy = function ()

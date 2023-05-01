@@ -1,7 +1,0 @@
-function SimulationBackend(simulationFrontend, backendSettings)
-SimulationBackend.prototype.changeBackendSettings = function (backendSettings)
-SimulationBackend.prototype.changeModelSettings = function (modelSettings)
-SimulationBackend.prototype.resume = function ()
-SimulationBackend.prototype.pause = function()
-SimulationBackend.prototype.requestObjects = function (names)
-SimulationBackend.prototype.destroy = function ()

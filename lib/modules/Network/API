@@ -1,3 +1,0 @@
-Network.parameters = []
-Network.generateAdjacencyLists: function (settings)
-Network.calculateNetworkSize: function (settings)

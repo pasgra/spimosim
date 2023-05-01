@@ -1,7 +1,0 @@
-PlotDisplay.prototype.getPlotOptions = function ()
-PlotDisplay.prototype.seriesLabels
-PlotDisplay.prototype.defaultLogScaleMode
-PlotDisplay.prototype.fittable
-PlotDisplay.prototype.initGui = function ()
-PlotDisplay.prototype.description
-PlotDisplay.optionText

@@ -21,7 +21,3 @@ Open the web console (usually by pressing [F12]).
    spimosimUi.listFeatures('DynamicVideo')
    spimosimUi.listFeatures('Controls')
    spimosimUi.listFeatures('Plotter')
-
-More documentation (work in progress):
-======================================
-Load the file lib/spimosimDoc/spimosimDoc.js into a spimosim application (not in a production version). The documentation ca be accessed via the spimosimDoc object.

@@ -1,5 +1,0 @@
-function VarInitializer(config, controls, varName)
-VarInitializer.prototype.hasGui = function ()
-VarInitializer.prototype.getMainElement = function ()
-VarInitializer.prototype.getKeyMap = function ()
-VarInitializer.protocolVarType

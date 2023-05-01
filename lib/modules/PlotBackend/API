@@ -1,7 +1,0 @@
-function PlotWebWorkerBackend(plot, backendSettings, t)
-PlotWebWorkerBackend.prototype.setInterval = function (interval)
-PlotWebWorkerBackend.prototype.isExpectingData = function ()
-PlotWebWorkerBackend.prototype.setAutoUpdate = function (doAutoUpdate)
-PlotWebWorkerBackend.prototype.calcSteps = function (force)
-PlotWebWorkerBackend.prototype.initWorker = function ()
-PlotWebWorkerBackend.prototype.destroy = function ()
