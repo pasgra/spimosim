@@ -830,6 +830,10 @@ input[type="range"] {
   width: 0;
 }
 
+.settings .jscode-setting .CodeMirror {
+  height: auto;
+}
+
 .settings .number-setting input,
 .settings .range-setting input {
   margin: 0;
