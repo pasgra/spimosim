@@ -1406,6 +1406,17 @@ input[type="range"] {
   content: '';
 }
 
+.plot-settings-storage button,
+.plot-settings-storage select,
+.plot-settings-storage input {
+  margin: 0.5rem;
+}
+
+.plot-settings-storage select,
+.plot-settings-storage input {
+  min-width: 10rem;
+}
+
 .fit-menu:empty {
   display: none;
 }
